@@ -28,8 +28,8 @@ public class LoanApplicationSteps {
     private final AccountsOverviewPage overviewPage;
 
     public LoanApplicationSteps() {
-        this.loanPage = new RequestLoanPage(driver);
-        this.overviewPage = new AccountsOverviewPage(driver);
+        this.loanPage = new RequestLoanPage();
+        this.overviewPage = new AccountsOverviewPage();
     }
 
     private ScenarioContext ctx() {

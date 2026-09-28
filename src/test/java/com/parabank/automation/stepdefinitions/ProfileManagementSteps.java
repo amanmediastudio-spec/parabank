@@ -28,8 +28,8 @@ public class ProfileManagementSteps {
     private final LoginPage loginPage;
 
     public ProfileManagementSteps() {
-        this.profilePage = new UpdateProfilePage(driver);
-        this.loginPage = new LoginPage(driver);
+        this.profilePage = new UpdateProfilePage();
+        this.loginPage = new LoginPage();
     }
 
     @And("updates the profile with new contact information:")

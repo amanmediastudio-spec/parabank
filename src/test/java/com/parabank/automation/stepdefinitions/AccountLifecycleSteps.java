@@ -32,9 +32,9 @@ public class AccountLifecycleSteps {
     private final AccountDetailsPage detailsPage;
 
     public AccountLifecycleSteps() {
-        this.overviewPage = new AccountsOverviewPage(driver);
-        this.openAccountPage = new OpenAccountPage(driver);
-        this.detailsPage = new AccountDetailsPage(driver);
+        this.overviewPage = new AccountsOverviewPage();
+        this.openAccountPage = new OpenAccountPage();
+        this.detailsPage = new AccountDetailsPage();
     }
 
     private ScenarioContext ctx() {

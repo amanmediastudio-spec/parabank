@@ -1,25 +1,43 @@
 package com.parabank.automation.pages;
 
-import com.parabank.automation.utils.ElementActions;
+import com.automation.pages.BasePage;
+import com.automation.ai.PageElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
+import com.automation.utils.ElementActions;
+import com.automation.utils.WaitUtils;
+import com.automation.driver.DriverManager;
+import com.parabank.automation.utils.ElementActions;
 
 /**
- * Page Object for Accounts Overview.
- * Handles dynamically populated asynchronous balance table.
+ * Migrated Page Object strictly compliant with Platform SDK Core.
+ * Original Source: AccountsOverviewPage
  */
 public class AccountsOverviewPage extends BasePage {
-    private final By accountTable = By.id("accountTable");
-    private final By accountRows = By.cssSelector("#accountTable tbody tr");
-    private final By accountLinks = By.cssSelector("#accountTable tbody tr td a[href*='activity.htm']");
-    private final By totalBalanceCell = By.xpath("//table[@id='accountTable']//tr[td[contains(., 'Total')]]/td[2] | //table[@id='accountTable']//b[contains(text(),'$')]");
 
-    public AccountsOverviewPage(WebDriver driver) {
-        super(driver);
+    // Registered SDK Page Elements (Self-Healing Enabled)
+    public PageElement accountTable;
+    public PageElement accountRows;
+    public PageElement accountLinks;
+    public PageElement totalBalanceCell;
+
+    public AccountsOverviewPage() {
+        super("AccountsOverviewPage");
+    }
+
+    public AccountsOverviewPage(String pageName) {
+        super(pageName);
+    }
+
+    @Override
+    protected void initElements() {
+        accountTable = register("accountTable", "accountTable", By.id("accountTable"));
+        accountRows = register("accountRows", "accountRows", By.cssSelector("#accountTable tbody tr"));
+        accountLinks = register("accountLinks", "accountLinks", By.cssSelector("#accountTable tbody tr td a[href*='activity.htm']"));
+        totalBalanceCell = register("totalBalanceCell", "totalBalanceCell", By.xpath("//table[@id='accountTable']//tr[td[contains(., 'Total')]]/td[2] | //table[@id='accountTable']//b[contains(text(),'$')]"));
     }
 
     public void waitForOverviewTableToLoad() {
@@ -30,7 +48,7 @@ public class AccountsOverviewPage extends BasePage {
             waitUtils.waitForAjax();
         } catch (org.openqa.selenium.TimeoutException e) {
             log.warn("Accounts Overview table did not appear on first attempt — refreshing page and retrying...");
-            driver.navigate().refresh();
+            com.automation.driver.DriverManager.getDriver().navigate().refresh();
             waitUtils.waitForVisibility(accountTable);
             waitUtils.waitForPresence(accountLinks);
             waitUtils.waitForAjax();
@@ -39,7 +57,7 @@ public class AccountsOverviewPage extends BasePage {
 
     public List<String> getAccountIds() {
         waitForOverviewTableToLoad();
-        List<WebElement> links = driver.findElements(accountLinks);
+        List<WebElement> links = findElements(accountLinks);
         List<String> ids = new ArrayList<>();
         for (WebElement link : links) {
             String text = link.getText().trim();
@@ -53,29 +71,23 @@ public class AccountsOverviewPage extends BasePage {
 
     public double getAccountBalance(String accountId) {
         waitForOverviewTableToLoad();
-        By balanceLocator = By.xpath(String.format(
-                "//table[@id='accountTable']//tr[td/a[normalize-space()='%s']]/td[2]",
-                accountId
-        ));
+        By balanceLocator = By.xpath(String.format("//table[@id='accountTable']//tr[td/a[normalize-space()='%s']]/td[2]", accountId));
         String rawBalance = actions.getText(balanceLocator);
-        return ElementActions.parseCurrency(rawBalance);
+        return rawBalance.parseCurrency();
     }
 
     public double getAvailableBalance(String accountId) {
         waitForOverviewTableToLoad();
-        By availableLocator = By.xpath(String.format(
-                "//table[@id='accountTable']//tr[td/a[normalize-space()='%s']]/td[3]",
-                accountId
-        ));
+        By availableLocator = By.xpath(String.format("//table[@id='accountTable']//tr[td/a[normalize-space()='%s']]/td[3]", accountId));
         String rawAvailable = actions.getText(availableLocator);
-        return ElementActions.parseCurrency(rawAvailable);
+        return rawAvailable.parseCurrency();
     }
 
     public double getTotalBalance() {
         waitForOverviewTableToLoad();
         try {
             WebElement totalElement = waitUtils.waitForVisibility(totalBalanceCell);
-            return ElementActions.parseCurrency(totalElement.getText());
+            return totalElement.getText().parseCurrency();
         } catch (Exception e) {
             log.warn("Total row not directly accessible via selector, calculating sum of all accounts: {}", e.getMessage());
             double sum = 0.0;
@@ -94,4 +106,5 @@ public class AccountsOverviewPage extends BasePage {
         waitUtils.waitForUrlContains("activity.htm");
         waitUtils.waitForAjax();
     }
+
 }

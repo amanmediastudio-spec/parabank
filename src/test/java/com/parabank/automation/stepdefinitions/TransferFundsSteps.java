@@ -33,10 +33,10 @@ public class TransferFundsSteps {
     private final OpenAccountPage openAccountPage;
 
     public TransferFundsSteps() {
-        this.transferPage = new TransferFundsPage(driver);
-        this.overviewPage = new AccountsOverviewPage(driver);
-        this.detailsPage = new AccountDetailsPage(driver);
-        this.openAccountPage = new OpenAccountPage(driver);
+        this.transferPage = new TransferFundsPage();
+        this.overviewPage = new AccountsOverviewPage();
+        this.detailsPage = new AccountDetailsPage();
+        this.openAccountPage = new OpenAccountPage();
     }
 
     private ScenarioContext ctx() {

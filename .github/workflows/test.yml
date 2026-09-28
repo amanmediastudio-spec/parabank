@@ -1,0 +1,142 @@
+name: HealQA Enterprise Test Automation CI/CD
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+  workflow_dispatch:
+    inputs:
+      maven_args:
+        description: 'Maven test execution options (managed by HealQA Platform)'
+        required: false
+        default: ''
+      engine_type:
+        description: 'Execution Engine (selenium, playwright)'
+        required: false
+        default: 'selenium'
+      browser:
+        description: 'Target Browser (chrome, firefox, edge)'
+        required: false
+        default: 'chrome'
+      tags:
+        description: 'Cucumber Tag Filter (e.g. @smoke, @regression)'
+        required: false
+        default: ''
+      ai_provider:
+        description: 'AI Provider (gemini, openai, anthropic)'
+        required: false
+        default: 'gemini'
+      gemini_api_key:
+        description: 'Gemini API Key override (optional)'
+        required: false
+        default: ''
+      openai_api_key:
+        description: 'OpenAI API Key override (optional)'
+        required: false
+        default: ''
+      environment:
+        description: 'Target Environment (dev, qa, staging, prod)'
+        required: false
+        default: 'qa'
+      headless:
+        description: 'Headless Mode (true/false)'
+        required: false
+        default: 'true'
+      thread_count:
+        description: 'Parallel Thread Count'
+        required: false
+        default: '2'
+      retry_count:
+        description: 'Failed Test Retry Count'
+        required: false
+        default: '1'
+      telemetry_url:
+        description: 'Telemetry Report Endpoint URL'
+        required: false
+        default: ''
+      healqa_api_url:
+        description: 'HealQA Platform Server URL for Realtime Event Ingestion'
+        required: false
+        default: ''
+      healqa_realtime_enabled:
+        description: 'Enable Realtime Event Ingestion'
+        required: false
+        default: 'false'
+      healqa_api_token:
+        description: 'HealQA Execution API Token'
+        required: false
+        default: ''
+      healqa_run_id:
+        description: 'HealQA Run ID'
+        required: false
+        default: ''
+      healqa_execution_id:
+        description: 'HealQA Execution ID'
+        required: false
+        default: ''
+
+jobs:
+  test:
+    name: Run Automated AI Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Run Test Suite in Cloud CI Runner
+        env:
+          GEMINI_API_KEY: ${{ github.event.inputs.gemini_api_key || secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ github.event.inputs.openai_api_key || secrets.OPENAI_API_KEY }}
+          HEALQA_API_URL: ${{ github.event.inputs.healqa_api_url || secrets.HEALQA_API_URL }}
+          HEALQA_REALTIME_ENABLED: ${{ github.event.inputs.healqa_realtime_enabled || 'false' }}
+          HEALQA_API_TOKEN: ${{ github.event.inputs.healqa_api_token || secrets.HEALQA_API_TOKEN }}
+          HEALQA_RUN_ID: ${{ github.event.inputs.healqa_run_id || github.event.inputs.healqa_execution_id || '' }}
+          HEALQA_EXECUTION_ID: ${{ github.event.inputs.healqa_execution_id || github.event.inputs.healqa_run_id || '' }}
+          HEALQA_EXECUTION_SOURCE: GITHUB_ACTIONS
+          PLATFORM_TELEMETRY_URL: ${{ github.event.inputs.telemetry_url || secrets.PLATFORM_TELEMETRY_URL || 'http://localhost:8080/api/v1/telemetry/report' }}
+          MAVEN_ARGS: ${{ github.event.inputs.maven_args }}
+        run: |
+          rm -rf ~/.m2/repository/com/automation
+          if [ -n "$MAVEN_ARGS" ]; then
+            eval "mvn clean test $MAVEN_ARGS"
+          else
+            mvn clean test \
+              -Dengine="${{ github.event.inputs.engine_type || 'selenium' }}" \
+              -Dengine.type="${{ github.event.inputs.engine_type || 'selenium' }}" \
+              -Dbrowser="${{ github.event.inputs.browser || 'chrome' }}" \
+              -Dcucumber.filter.tags="${{ github.event.inputs.tags }}" \
+              -Dai.provider="${{ github.event.inputs.ai_provider || 'gemini' }}" \
+              -Dai.gemini.api.key="$GEMINI_API_KEY" \
+              -Dai.openai.api.key="$OPENAI_API_KEY" \
+              -Denv="${{ github.event.inputs.environment || 'qa' }}" \
+              -Dheadless="${{ github.event.inputs.headless || 'true' }}" \
+              -Dthread.count="${{ github.event.inputs.thread_count || '2' }}" \
+              -Dretry.count="${{ github.event.inputs.retry_count || '1' }}" \
+              -Dexecution.mode=local \
+              -Dai.telemetry.url="$PLATFORM_TELEMETRY_URL"
+          fi
+
+      - name: Archive Test Execution Reports
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-execution-reports
+          path: |
+            target/surefire-reports/
+            target/cucumber-reports/
+            target/screenshots/
+            target/videos/
+            target/element-healing-history.json
+            target/ai-dashboard/
+          retention-days: 14

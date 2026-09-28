@@ -29,9 +29,9 @@ public class TransactionSearchSteps {
     private final AccountsOverviewPage overviewPage;
 
     public TransactionSearchSteps() {
-        this.findTransPage = new FindTransactionsPage(driver);
-        this.transferPage = new TransferFundsPage(driver);
-        this.overviewPage = new AccountsOverviewPage(driver);
+        this.findTransPage = new FindTransactionsPage();
+        this.transferPage = new TransferFundsPage();
+        this.overviewPage = new AccountsOverviewPage();
     }
 
     private ScenarioContext ctx() {
