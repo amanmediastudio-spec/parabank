@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.parabank.automation.runners.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 9, Time elapsed: 21.70 s <<< FAILURE! -- in com.parabank.automation.runners.TestRunner
+Third-Party Bill Payment Processing.Third-Party Bill Payment Processing - Successfully process third-party bill payment and verify ledger deduction -- Time elapsed: 21.39 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+[Bill payment confirmation container should be visible] 
+Expecting value to be true but was false
+	at com.parabank.automation.stepdefinitions.BillPaymentSteps.verifyBillPaymentConfirmation(BillPaymentSteps.java:82)
+	at ✽.the bill payment confirmation should display payee "Apex Energy Grid" and amount "45.50"(classpath:features/03_third_party_bill_payment.feature:13)
+

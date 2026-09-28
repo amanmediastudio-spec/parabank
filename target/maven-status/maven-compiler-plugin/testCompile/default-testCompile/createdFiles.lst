@@ -1,0 +1,9 @@
+com\parabank\automation\stepdefinitions\BillPaymentSteps.class
+com\parabank\automation\stepdefinitions\AccountLifecycleSteps.class
+com\parabank\automation\stepdefinitions\TransactionSearchSteps.class
+com\parabank\automation\stepdefinitions\ProfileManagementSteps.class
+com\parabank\automation\runners\TestRunner.class
+com\parabank\automation\stepdefinitions\CommonSteps.class
+com\parabank\automation\stepdefinitions\LoanApplicationSteps.class
+com\parabank\automation\hooks\Hooks.class
+com\parabank\automation\stepdefinitions\TransferFundsSteps.class
