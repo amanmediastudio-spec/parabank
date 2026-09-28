@@ -221,9 +221,10 @@ public class TransferFundsSteps {
         overviewPage.waitForOverviewTableToLoad();
         String tertiaryId = context.getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
         double delta = Double.parseDouble(amountStr);
+        double initialBal = context.getDouble(ContextKey.TERTIARY_INITIAL_BALANCE);
 
         double current = overviewPage.getAccountBalance(tertiaryId);
-        assertThat(current).isGreaterThanOrEqualTo(delta);
+        assertThat(current).isCloseTo(initialBal + delta, within(0.01));
     }
 
     @And("the overall total portfolio balance should remain preserved across all internal transfers")

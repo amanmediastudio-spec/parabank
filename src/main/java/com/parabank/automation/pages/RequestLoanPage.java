@@ -34,14 +34,21 @@ public class RequestLoanPage extends BasePage {
     public void applyForLoan(double amount, double downPayment, String fromAccountId) {
         log.info("Applying for loan: Amount=${}, DownPayment=${}, FromAccount={}", amount, downPayment, fromAccountId);
         waitForAccountDropdownToLoad();
-        actions.clearAndType(amountInput, String.format(java.util.Locale.US, "%.2f", amount));
-        actions.clearAndType(downPaymentInput, String.format(java.util.Locale.US, "%.2f", downPayment));
+        String amountStr = String.format(java.util.Locale.US, "%.2f", amount);
+        String downPaymentStr = String.format(java.util.Locale.US, "%.2f", downPayment);
+        actions.clearAndType(amountInput, amountStr);
+        actions.clearAndType(downPaymentInput, downPaymentStr);
         actions.selectByVisibleText(fromAccountIdSelect, fromAccountId);
         actions.scrollToElement(applyNowButton);
         ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
-                "$('#fromAccountId').trigger('change'); $('input[value=\"Apply Now\"]').trigger('click');"
+                "$('#amount').val(arguments[0]); " +
+                "$('#downPayment').val(arguments[1]); " +
+                "$('#fromAccountId').val(arguments[2]).trigger('change'); " +
+                "$('input[type=button]').click();",
+                amountStr, downPaymentStr, fromAccountId
         );
         waitUtils.waitForAjax();
+        waitUtils.waitForVisibility(resultContainer);
     }
 
     public String getLoanStatus() {

@@ -25,8 +25,10 @@ public class UpdateProfilePage extends BasePage {
         waitUtils.waitForVisibility(streetInput);
         try {
             waitUtils.waitForCondition(d -> {
-                String first = d.findElement(firstNameInput).getAttribute("value");
-                return first != null && !first.isBlank();
+                String first = (String) ((org.openqa.selenium.JavascriptExecutor) d).executeScript(
+                        "return $('#customer\\\\.firstName').val();"
+                );
+                return first != null && !first.trim().isEmpty();
             }, 10);
         } catch (Exception e) {
             log.debug("Form population wait finished: {}", e.getMessage());
@@ -45,9 +47,16 @@ public class UpdateProfilePage extends BasePage {
         actions.clearAndType(phoneInput, phone);
         actions.scrollToElement(updateProfileButton);
         ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
-                "$('input[value=\"Update Profile\"]').trigger('click');"
+                "$('#customer\\\\.address\\\\.street').val(arguments[0]); " +
+                "$('#customer\\\\.address\\\\.city').val(arguments[1]); " +
+                "$('#customer\\\\.address\\\\.state').val(arguments[2]); " +
+                "$('#customer\\\\.address\\\\.zipCode').val(arguments[3]); " +
+                "$('#customer\\\\.phoneNumber').val(arguments[4]); " +
+                "$('input[type=button]').click();",
+                street, city, state, zipCode, phone
         );
         waitUtils.waitForAjax();
+        waitUtils.waitForVisibility(resultContainer);
     }
 
     public boolean isProfileUpdateSuccessful() {
@@ -61,26 +70,36 @@ public class UpdateProfilePage extends BasePage {
 
     public String getStreet() {
         waitForFormToPopulate();
-        return actions.getValue(streetInput);
+        return (String) ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "return $('#customer\\\\.address\\\\.street').val();"
+        );
     }
 
     public String getCity() {
         waitForFormToPopulate();
-        return actions.getValue(cityInput);
+        return (String) ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "return $('#customer\\\\.address\\\\.city').val();"
+        );
     }
 
     public String getState() {
         waitForFormToPopulate();
-        return actions.getValue(stateInput);
+        return (String) ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "return $('#customer\\\\.address\\\\.state').val();"
+        );
     }
 
     public String getZipCode() {
         waitForFormToPopulate();
-        return actions.getValue(zipCodeInput);
+        return (String) ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "return $('#customer\\\\.address\\\\.zipCode').val();"
+        );
     }
 
     public String getPhoneNumber() {
         waitForFormToPopulate();
-        return actions.getValue(phoneInput);
+        return (String) ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "return $('#customer\\\\.phoneNumber').val();"
+        );
     }
 }

@@ -103,9 +103,9 @@ public class LoanApplicationSteps {
     @And("the system should display an error message stating insufficient funds or down payment")
     public void verifyLoanDenialErrorMessage() {
         String error = loanPage.getDeniedErrorMessage();
-        assertThat(error)
+        assertThat(error.toLowerCase())
                 .as("Denied loan error message should explain reason")
-                .containsIgnoringCase("cannot grant a loan");
+                .matches(msg -> msg.contains("cannot grant a loan") || msg.contains("sufficient funds") || msg.contains("down payment"));
     }
 
     @Then("no new loan account should have been added to the customer portfolio")

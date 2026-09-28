@@ -72,4 +72,14 @@ public class OpenAccountPage extends BasePage {
         actions.click(newAccountIdLink);
         waitUtils.waitForAjax();
     }
+
+    public String getFirstAvailableSourceAccountId() {
+        waitForDropdownsToLoad();
+        Select fromSelect = new Select(driver.findElement(fromAccountSelect));
+        java.util.List<WebElement> options = fromSelect.getOptions();
+        if (!options.isEmpty()) {
+            return options.get(0).getText().trim();
+        }
+        return null;
+    }
 }

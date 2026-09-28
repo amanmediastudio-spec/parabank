@@ -58,6 +58,11 @@ public class AccountLifecycleSteps {
         String primaryAccountId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
 
         openAccountPage.selectAccountType(type);
+        if (primaryAccountId == null) {
+            primaryAccountId = openAccountPage.getFirstAvailableSourceAccountId();
+            context.set(ContextKey.PRIMARY_ACCOUNT_ID, primaryAccountId);
+            log.info("Auto-discovered primary account ID: {}", primaryAccountId);
+        }
         if (primaryAccountId != null) {
             openAccountPage.selectFromAccount(primaryAccountId);
         }
@@ -140,6 +145,11 @@ public class AccountLifecycleSteps {
         String primaryAccountId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
 
         openAccountPage.selectAccountType(type);
+        if (primaryAccountId == null) {
+            primaryAccountId = openAccountPage.getFirstAvailableSourceAccountId();
+            context.set(ContextKey.PRIMARY_ACCOUNT_ID, primaryAccountId);
+            log.info("Auto-discovered primary account ID: {}", primaryAccountId);
+        }
         if (primaryAccountId != null) {
             openAccountPage.selectFromAccount(primaryAccountId);
         }
@@ -180,6 +190,7 @@ public class AccountLifecycleSteps {
 
         context.set(ContextKey.SOURCE_INITIAL_BALANCE, b1);
         context.set(ContextKey.TARGET_INITIAL_BALANCE, b2);
+        context.set(ContextKey.TERTIARY_INITIAL_BALANCE, b3);
         context.set(ContextKey.TOTAL_PORTFOLIO_BALANCE, overviewPage.getTotalBalance());
 
         log.info("Recorded initial trio balances: Primary=${}, Secondary=${}, Tertiary=${}", b1, b2, b3);

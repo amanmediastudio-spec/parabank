@@ -2,6 +2,9 @@ package com.parabank.automation.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 /**
  * Page Object for Parabank Login Page.
@@ -26,21 +29,33 @@ public class LoginPage extends BasePage {
 
     public void enterUsername(String username) {
         actions.clearAndType(usernameInput, username);
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "$('input[name=username]').val(arguments[0]);", username
+        );
     }
 
     public void enterPassword(String password) {
         actions.clearAndType(passwordInput, password);
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "$('input[name=password]').val(arguments[0]);", password
+        );
     }
 
     public void clickLogin() {
         log.info("Submitting login form");
-        actions.click(loginButton);
+        actions.scrollToElement(loginButton);
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "$('form[name=login]').submit();"
+        );
         waitUtils.waitForAjax();
         try {
-            waitUtils.waitForCondition(d ->
-                !d.findElements(By.xpath("//div[@id='leftPanel']//a[contains(@href, 'logout.htm')]")).isEmpty() ||
-                !d.findElements(errorMessage).isEmpty(), 15
-            );
+            waitUtils.waitForCondition(d -> {
+                List<WebElement> logoutLinks = d.findElements(By.xpath("//div[@id='leftPanel']//a[contains(@href, 'logout.htm')]"));
+                if (!logoutLinks.isEmpty() && logoutLinks.get(0).isDisplayed()) {
+                    return true;
+                }
+                return d.findElements(errorMessage).stream().anyMatch(WebElement::isDisplayed);
+            }, 15);
         } catch (Exception e) {
             log.debug("Wait for login transition completed or timed out: {}", e.getMessage());
         }

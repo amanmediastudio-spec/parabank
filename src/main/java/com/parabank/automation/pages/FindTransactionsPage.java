@@ -43,42 +43,73 @@ public class FindTransactionsPage extends BasePage {
         }, 10);
     }
 
+    public void ensureFormVisible() {
+        try {
+            WebElement form = driver.findElement(By.id("formContainer"));
+            if (!form.isDisplayed()) {
+                ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                        "$('#resultContainer').hide(); $('#errorContainer').hide(); $('#formContainer').show();"
+                );
+            }
+        } catch (Exception ignored) {
+        }
+    }
+
     public void selectAccount(String accountId) {
         log.info("Selecting account for transaction search: {}", accountId);
+        ensureFormVisible();
         waitForAccountDropdownToLoad();
         actions.selectByVisibleText(accountSelect, accountId);
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "$('#accountId').val(arguments[0]).trigger('change');", accountId
+        );
     }
 
     public void searchById(String transactionId) {
         log.info("Searching transactions by ID: {}", transactionId);
+        ensureFormVisible();
         actions.clearAndType(transactionIdInput, transactionId);
-        actions.click(findByIdButton);
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "$('#transactionId').val(arguments[0]); $('#findById').click();", transactionId
+        );
         waitUtils.waitForAjax();
     }
 
     public void searchByDate(String date) {
         log.info("Searching transactions by Date: {}", date);
+        ensureFormVisible();
         actions.clearAndType(dateInput, date);
-        actions.click(findByDateButton);
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "$('#transactionDate').val(arguments[0]); $('#findByDate').click();", date
+        );
         waitUtils.waitForAjax();
     }
 
     public void searchByDateRange(String fromDate, String toDate) {
         log.info("Searching transactions by Date Range: {} to {}", fromDate, toDate);
+        ensureFormVisible();
         actions.clearAndType(fromDateInput, fromDate);
         actions.clearAndType(toDateInput, toDate);
-        actions.click(findByDateRangeButton);
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "$('#fromDate').val(arguments[0]); $('#toDate').val(arguments[1]); $('#findByDateRange').click();",
+                fromDate, toDate
+        );
         waitUtils.waitForAjax();
     }
 
     public void searchByAmount(double amount) {
         log.info("Searching transactions by Amount: {}", amount);
-        actions.clearAndType(amountInput, String.format("%.2f", amount));
-        actions.click(findByAmountButton);
+        ensureFormVisible();
+        String amountStr = String.format(java.util.Locale.US, "%.2f", amount);
+        actions.clearAndType(amountInput, amountStr);
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "$('#amount').val(arguments[0]); $('#findByAmount').click();", amountStr
+        );
         waitUtils.waitForAjax();
     }
 
     public void waitForResults() {
+        waitUtils.waitForVisibility(By.id("resultContainer"));
         waitUtils.waitForVisibility(transactionTable);
         waitUtils.waitForPresence(transactionRows);
     }
@@ -88,9 +119,10 @@ public class FindTransactionsPage extends BasePage {
         List<WebElement> links = driver.findElements(transactionLinks);
         List<String> ids = new ArrayList<>();
         for (WebElement link : links) {
-            String text = link.getText().trim();
-            if (!text.isEmpty()) {
-                ids.add(text);
+            String href = link.getAttribute("href");
+            if (href != null && href.contains("id=")) {
+                String id = href.substring(href.indexOf("id=") + 3);
+                ids.add(id);
             }
         }
         return ids;
@@ -98,7 +130,7 @@ public class FindTransactionsPage extends BasePage {
 
     public boolean hasTransactionWithAmount(double expectedAmount) {
         waitForResults();
-        String formatted = String.format("%.2f", expectedAmount);
+        String formatted = String.format(java.util.Locale.US, "%.2f", expectedAmount);
         List<WebElement> rows = driver.findElements(transactionRows);
         for (WebElement row : rows) {
             if (row.getText().contains(formatted)) {

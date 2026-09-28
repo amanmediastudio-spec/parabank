@@ -44,6 +44,14 @@ public class TransferFundsPage extends BasePage {
 
     public void selectFromAccount(String accountId) {
         log.info("Selecting source account: {}", accountId);
+        waitUtils.waitForCondition(d -> {
+            try {
+                Select s = new Select(d.findElement(fromAccountSelect));
+                return s.getOptions().stream().anyMatch(opt -> opt.getText().trim().equals(accountId));
+            } catch (Exception e) {
+                return false;
+            }
+        }, 15);
         actions.selectByVisibleText(fromAccountSelect, accountId);
         ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
                 "$('#fromAccountId').val(arguments[0]).trigger('change');", accountId
@@ -52,6 +60,14 @@ public class TransferFundsPage extends BasePage {
 
     public void selectToAccount(String accountId) {
         log.info("Selecting target account: {}", accountId);
+        waitUtils.waitForCondition(d -> {
+            try {
+                Select s = new Select(d.findElement(toAccountSelect));
+                return s.getOptions().stream().anyMatch(opt -> opt.getText().trim().equals(accountId));
+            } catch (Exception e) {
+                return false;
+            }
+        }, 15);
         actions.selectByVisibleText(toAccountSelect, accountId);
         ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
                 "$('#toAccountId').val(arguments[0]).trigger('change');", accountId
