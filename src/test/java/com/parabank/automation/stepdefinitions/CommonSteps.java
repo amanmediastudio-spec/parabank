@@ -1,5 +1,7 @@
 package com.parabank.automation.stepdefinitions;
 
+import com.automation.utils.ElementActions;
+
 import com.parabank.automation.config.ConfigReader;
 import com.parabank.automation.driver.DriverManager;
 import com.parabank.automation.pages.LoginPage;
@@ -25,19 +27,19 @@ public class CommonSteps {
     private final NavigationMenu navigationMenu;
 
     public CommonSteps() {
-        this.loginPage = new LoginPage(driver);
+        this.loginPage = new LoginPage();
         this.navigationMenu = loginPage.navigation();
     }
 
     @Given("the user is on the Parabank landing page")
     public void userIsOnLandingPage() {
-        driver.get(ConfigReader.getBaseUrl());
+        ElementActions.navigateToUrl(ConfigReader.getBaseUrl());
     }
 
     @Given("the user logs into Parabank with credentials {string} and {string}")
     public void userLogsInWithCredentials(String username, String password) {
         log.info("Logging into Parabank with username '{}'", username);
-        driver.get(ConfigReader.getBaseUrl());
+        ElementActions.navigateToUrl(ConfigReader.getBaseUrl());
         loginPage.login(username, password);
 
         // Self-healing fallback if database was reset in demo environment
@@ -94,7 +96,7 @@ public class CommonSteps {
     public void userAttemptsDeepLinkAccess(String pageRelativeUrl) {
         String fullUrl = ConfigReader.getBaseUrl().replace("index.htm", pageRelativeUrl);
         log.info("Attempting unauthorized access to {}", fullUrl);
-        driver.get(fullUrl);
+        ElementActions.navigateToUrl(fullUrl);
     }
 
     @Then("the user should see the login form indicating session termination")

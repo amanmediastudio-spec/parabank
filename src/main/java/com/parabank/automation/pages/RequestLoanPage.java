@@ -1,34 +1,59 @@
 package com.parabank.automation.pages;
 
+import com.automation.pages.BasePage;
+import com.automation.ai.PageElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import java.util.List;
+import java.util.ArrayList;
+import com.automation.utils.ElementActions;
+import com.automation.utils.WaitUtils;
+import com.automation.driver.DriverManager;
 import org.openqa.selenium.support.ui.Select;
 
 /**
- * Page Object for Request Loan service.
+ * Migrated Page Object strictly compliant with Platform SDK Core.
+ * Original Source: RequestLoanPage
  */
 public class RequestLoanPage extends BasePage {
-    private final By amountInput = By.id("amount");
-    private final By downPaymentInput = By.id("downPayment");
-    private final By fromAccountIdSelect = By.id("fromAccountId");
-    private final By applyNowButton = By.cssSelector("input.button[value='Apply Now']");
 
-    private final By resultContainer = By.id("requestLoanResult");
-    private final By loanStatusText = By.id("loanStatus");
-    private final By newAccountIdLink = By.id("newAccountId");
-    private final By loanDeniedError = By.cssSelector("#loanRequestDenied p.error, div#loanRequestDenied p");
+    // Registered SDK Page Elements (Self-Healing Enabled)
+    public PageElement amountInput;
+    public PageElement downPaymentInput;
+    public PageElement fromAccountIdSelect;
+    public PageElement applyNowButton;
+    public PageElement resultContainer;
+    public PageElement loanStatusText;
+    public PageElement newAccountIdLink;
+    public PageElement loanDeniedError;
 
-    public RequestLoanPage(WebDriver driver) {
-        super(driver);
+    public RequestLoanPage() {
+        super("RequestLoanPage");
+    }
+
+    public RequestLoanPage(String pageName) {
+        super(pageName);
+    }
+
+    @Override
+    protected void initElements() {
+        amountInput = register("amountInput", "amountInput", By.id("amount"));
+        downPaymentInput = register("downPaymentInput", "downPaymentInput", By.id("downPayment"));
+        fromAccountIdSelect = register("fromAccountIdSelect", "fromAccountIdSelect", By.id("fromAccountId"));
+        applyNowButton = register("applyNowButton", "applyNowButton", By.cssSelector("input.button[value='Apply Now']"));
+        resultContainer = register("resultContainer", "resultContainer", By.id("requestLoanResult"));
+        loanStatusText = register("loanStatusText", "loanStatusText", By.id("loanStatus"));
+        newAccountIdLink = register("newAccountIdLink", "newAccountIdLink", By.id("newAccountId"));
+        loanDeniedError = register("loanDeniedError", "loanDeniedError", By.cssSelector("#loanRequestDenied p.error, div#loanRequestDenied p"));
     }
 
     public void waitForAccountDropdownToLoad() {
         waitUtils.waitForClickable(fromAccountIdSelect);
         waitUtils.waitForCondition(d -> {
-            Select select = new Select(d.findElement(fromAccountIdSelect));
-            return !select.getOptions().isEmpty();
-        }, 10);
+    Select select = new Select(d.findElement(fromAccountIdSelect));
+    return !select.getOptions().isEmpty();
+}, 10);
     }
 
     public void applyForLoan(double amount, double downPayment, String fromAccountId) {
@@ -40,13 +65,7 @@ public class RequestLoanPage extends BasePage {
         actions.clearAndType(downPaymentInput, downPaymentStr);
         actions.selectByVisibleText(fromAccountIdSelect, fromAccountId);
         actions.scrollToElement(applyNowButton);
-        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
-                "$('#amount').val(arguments[0]); " +
-                "$('#downPayment').val(arguments[1]); " +
-                "$('#fromAccountId').val(arguments[2]).trigger('change'); " +
-                "$('input[type=button]').click();",
-                amountStr, downPaymentStr, fromAccountId
-        );
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("$('#amount').val(arguments[0]); " + "$('#downPayment').val(arguments[1]); " + "$('#fromAccountId').val(arguments[2]).trigger('change'); " + "$('input[type=button]').click();", amountStr, downPaymentStr, fromAccountId);
         waitUtils.waitForAjax();
         waitUtils.waitForVisibility(resultContainer);
     }
@@ -74,4 +93,5 @@ public class RequestLoanPage extends BasePage {
             return false;
         }
     }
+
 }

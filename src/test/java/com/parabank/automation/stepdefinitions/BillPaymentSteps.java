@@ -33,9 +33,9 @@ public class BillPaymentSteps {
     private final AccountDetailsPage detailsPage;
 
     public BillPaymentSteps() {
-        this.billPayPage = new BillPayPage(driver);
-        this.overviewPage = new AccountsOverviewPage(driver);
-        this.detailsPage = new AccountDetailsPage(driver);
+        this.billPayPage = new BillPayPage();
+        this.overviewPage = new AccountsOverviewPage();
+        this.detailsPage = new AccountDetailsPage();
     }
 
     private ScenarioContext ctx() {
