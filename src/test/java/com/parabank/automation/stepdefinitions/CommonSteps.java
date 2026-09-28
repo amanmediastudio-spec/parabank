@@ -4,7 +4,6 @@ import com.parabank.automation.config.ConfigReader;
 import com.parabank.automation.driver.DriverManager;
 import com.parabank.automation.pages.LoginPage;
 import com.parabank.automation.pages.NavigationMenu;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

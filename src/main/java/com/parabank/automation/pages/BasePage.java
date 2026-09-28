@@ -21,7 +21,7 @@ public abstract class BasePage {
         this.driver = driver;
         this.waitUtils = new WaitUtils(driver);
         this.actions = new ElementActions(driver, waitUtils);
-        this.navigationMenu = new NavigationMenu(driver, waitUtils, actions);
+        this.navigationMenu = new NavigationMenu(waitUtils, actions);
     }
 
     public NavigationMenu navigation() {

@@ -57,7 +57,7 @@ public class ElementActions {
 
     public String getValue(By locator) {
         WebElement element = waitUtils.waitForPresence(locator);
-        return element.getAttribute("value");
+        return element.getDomProperty("value");
     }
 
     public boolean isDisplayed(By locator) {

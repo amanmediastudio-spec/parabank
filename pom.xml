@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
 
     <name>Selenium Java Cucumber Enterprise Parabank Automation</name>
-    <description>Enterprise Test Automation Framework using Selenium WebDriver, Java 21, Cucumber BDD, PicoContainer, and JUnit 5</description>
+    <description>Enterprise Test Automation Framework using Selenium WebDriver, Java 21, Cucumber BDD, and JUnit 5</description>
 
     <properties>
         <maven.compiler.release>21</maven.compiler.release>

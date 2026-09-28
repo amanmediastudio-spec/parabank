@@ -3,7 +3,6 @@ package com.parabank.automation.pages;
 import com.parabank.automation.utils.ElementActions;
 import com.parabank.automation.utils.WaitUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,7 +11,6 @@ import org.slf4j.LoggerFactory;
  */
 public class NavigationMenu {
     private static final Logger log = LoggerFactory.getLogger(NavigationMenu.class);
-    private final WebDriver driver;
     private final WaitUtils waitUtils;
     private final ElementActions actions;
 
@@ -26,8 +24,7 @@ public class NavigationMenu {
     private final By logOutLink = By.xpath("//div[@id='leftPanel']//a[contains(@href, 'logout.htm')]");
     private final By welcomeUserText = By.xpath("//div[@id='leftPanel']//p[contains(@class, 'smallText')]");
 
-    public NavigationMenu(WebDriver driver, WaitUtils waitUtils, ElementActions actions) {
-        this.driver = driver;
+    public NavigationMenu(WaitUtils waitUtils, ElementActions actions) {
         this.waitUtils = waitUtils;
         this.actions = actions;
     }

@@ -15,7 +15,6 @@ public class LoginPage extends BasePage {
     private final By loginButton = By.cssSelector("input.button[value='Log In']");
     private final By registerLink = By.linkText("Register");
     private final By errorMessage = By.cssSelector("p.error");
-    private final By loginPanel = By.id("loginPanel");
 
     public LoginPage(WebDriver driver) {
         super(driver);

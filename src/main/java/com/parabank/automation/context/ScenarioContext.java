@@ -12,7 +12,7 @@ import java.util.Map;
  * Uses a {@link ThreadLocal} for thread-safety during parallel execution.
  * Step definitions call {@link #current()} to obtain the instance — no DI
  * container or constructor injection required (zero-arg instantiation).
- * Call {@link #clear()} in the Cucumber {@code @After} hook to reset state
+ * Call {@link #reset()} in the Cucumber {@code @After} hook to reset state
  * between scenarios.
  */
 public final class ScenarioContext {

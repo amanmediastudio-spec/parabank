@@ -15,7 +15,6 @@ public class AccountDetailsPage extends BasePage {
     private final By accountTypeText = By.id("accountType");
     private final By balanceText = By.id("balance");
     private final By availableBalanceText = By.id("availableBalance");
-    private final By transactionTable = By.id("transactionTable");
     private final By transactionRows = By.cssSelector("#transactionTable tbody tr");
     private final By transactionLinks = By.cssSelector("#transactionTable tbody tr td a");
 

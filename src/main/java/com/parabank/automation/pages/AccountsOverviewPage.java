@@ -14,7 +14,6 @@ import java.util.List;
  */
 public class AccountsOverviewPage extends BasePage {
     private final By accountTable = By.id("accountTable");
-    private final By accountRows = By.cssSelector("#accountTable tbody tr");
     private final By accountLinks = By.cssSelector("#accountTable tbody tr td a[href*='activity.htm']");
     private final By totalBalanceCell = By.xpath("//table[@id='accountTable']//tr[td[contains(., 'Total')]]/td[2] | //table[@id='accountTable']//b[contains(text(),'$')]");
 

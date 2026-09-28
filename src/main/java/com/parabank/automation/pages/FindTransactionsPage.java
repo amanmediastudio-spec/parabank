@@ -15,17 +15,10 @@ import java.util.List;
 public class FindTransactionsPage extends BasePage {
     private final By accountSelect = By.id("accountId");
     private final By transactionIdInput = By.id("transactionId");
-    private final By findByIdButton = By.id("findById");
-
     private final By dateInput = By.id("transactionDate");
-    private final By findByDateButton = By.id("findByDate");
-
     private final By fromDateInput = By.id("fromDate");
     private final By toDateInput = By.id("toDate");
-    private final By findByDateRangeButton = By.id("findByDateRange");
-
     private final By amountInput = By.id("amount");
-    private final By findByAmountButton = By.id("findByAmount");
 
     private final By transactionTable = By.id("transactionTable");
     private final By transactionRows = By.cssSelector("#transactionTable tbody tr");
@@ -119,7 +112,7 @@ public class FindTransactionsPage extends BasePage {
         List<WebElement> links = driver.findElements(transactionLinks);
         List<String> ids = new ArrayList<>();
         for (WebElement link : links) {
-            String href = link.getAttribute("href");
+            String href = link.getDomAttribute("href");
             if (href != null && href.contains("id=")) {
                 String id = href.substring(href.indexOf("id=") + 3);
                 ids.add(id);

@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
  * Page Object for Update Profile / Contact Info.
  */
 public class UpdateProfilePage extends BasePage {
-    private final By firstNameInput = By.id("customer.firstName");
-    private final By lastNameInput = By.id("customer.lastName");
     private final By streetInput = By.id("customer.address.street");
     private final By cityInput = By.id("customer.address.city");
     private final By stateInput = By.id("customer.address.state");

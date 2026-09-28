@@ -8,8 +8,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
@@ -22,7 +20,6 @@ import static org.assertj.core.api.Assertions.assertThat;
  * (This class does not share cross-step state so ScenarioContext is not needed.)
  */
 public class ProfileManagementSteps {
-    private static final Logger log = LoggerFactory.getLogger(ProfileManagementSteps.class);
     private final WebDriver driver = DriverManager.getDriver();
     private final UpdateProfilePage profilePage;
     private final LoginPage loginPage;
