@@ -1,6 +1,5 @@
 package com.parabank.automation.stepdefinitions;
 
-import com.parabank.automation.context.ScenarioContext;
 import com.parabank.automation.driver.DriverManager;
 import com.parabank.automation.pages.LoginPage;
 import com.parabank.automation.pages.UpdateProfilePage;
@@ -17,15 +16,18 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Step definitions for Profile Management scenarios.
+ * Zero-arg constructor — no DI container required.
+ * (This class does not share cross-step state so ScenarioContext is not needed.)
+ */
 public class ProfileManagementSteps {
     private static final Logger log = LoggerFactory.getLogger(ProfileManagementSteps.class);
     private final WebDriver driver = DriverManager.getDriver();
-    private final ScenarioContext context;
     private final UpdateProfilePage profilePage;
     private final LoginPage loginPage;
 
-    public ProfileManagementSteps(ScenarioContext context) {
-        this.context = context;
+    public ProfileManagementSteps() {
         this.profilePage = new UpdateProfilePage(driver);
         this.loginPage = new LoginPage(driver);
     }

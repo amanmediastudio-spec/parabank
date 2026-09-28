@@ -7,15 +7,44 @@ import java.util.EnumMap;
 import java.util.Map;
 
 /**
- * ScenarioContext manages scenario-scoped state across multiple step definitions.
- * Automatically instantiated and injected by cucumber-picocontainer per Scenario.
+ * ScenarioContext manages scenario-scoped state shared across step definitions.
+ * <p>
+ * Uses a {@link ThreadLocal} for thread-safety during parallel execution.
+ * Step definitions call {@link #current()} to obtain the instance — no DI
+ * container or constructor injection required (zero-arg instantiation).
+ * Call {@link #clear()} in the Cucumber {@code @After} hook to reset state
+ * between scenarios.
  */
-public class ScenarioContext {
+public final class ScenarioContext {
+
     private static final Logger log = LoggerFactory.getLogger(ScenarioContext.class);
+
+    /** One isolated context map per thread. */
+    private static final ThreadLocal<ScenarioContext> INSTANCE =
+            ThreadLocal.withInitial(ScenarioContext::new);
+
     private final Map<ContextKey, Object> contextMap = new EnumMap<>(ContextKey.class);
 
+    // Private — callers must use current()
+    private ScenarioContext() {}
+
+    /** Returns the thread-bound {@code ScenarioContext} instance. */
+    public static ScenarioContext current() {
+        return INSTANCE.get();
+    }
+
+    /** Resets state at end of scenario and removes the ThreadLocal entry. */
+    public static void reset() {
+        log.debug("ScenarioContext reset for thread '{}'.", Thread.currentThread().getName());
+        INSTANCE.remove();          // removes entry & allows GC; next call re-creates
+    }
+
+    // -----------------------------------------------------------------------
+    // State accessors
+    // -----------------------------------------------------------------------
+
     public void set(ContextKey key, Object value) {
-        log.debug("Setting ScenarioContext [{} = {}]", key, value);
+        log.debug("ScenarioContext [{} = {}]", key, value);
         contextMap.put(key, value);
     }
 
@@ -26,11 +55,11 @@ public class ScenarioContext {
     @SuppressWarnings("unchecked")
     public <T> T get(ContextKey key, Class<T> clazz) {
         Object val = contextMap.get(key);
-        if (val == null) {
-            return null;
-        }
+        if (val == null) return null;
         if (!clazz.isInstance(val)) {
-            throw new ClassCastException("Context key " + key + " expected " + clazz.getName() + " but was " + val.getClass().getName());
+            throw new ClassCastException("Context key " + key
+                    + " expected " + clazz.getName()
+                    + " but was " + val.getClass().getName());
         }
         return (T) val;
     }
@@ -42,12 +71,9 @@ public class ScenarioContext {
 
     public Double getDouble(ContextKey key) {
         Object val = contextMap.get(key);
-        if (val instanceof Number number) {
-            return number.doubleValue();
-        }
-        if (val instanceof String str) {
-            return Double.parseDouble(str.replace("$", "").replace(",", "").trim());
-        }
+        if (val instanceof Number n) return n.doubleValue();
+        if (val instanceof String s)
+            return Double.parseDouble(s.replace("$", "").replace(",", "").trim());
         return null;
     }
 
@@ -55,8 +81,9 @@ public class ScenarioContext {
         return contextMap.containsKey(key);
     }
 
+    /** @deprecated Use {@link #reset()} from the {@code @After} hook instead. */
+    @Deprecated
     public void clear() {
         contextMap.clear();
-        log.debug("ScenarioContext cleared.");
     }
 }

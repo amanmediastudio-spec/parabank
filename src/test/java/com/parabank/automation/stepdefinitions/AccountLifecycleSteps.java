@@ -19,19 +19,26 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.within;
 
+/**
+ * Step definitions for Account Lifecycle scenarios.
+ * Zero-arg constructor — no DI container required.
+ * Scenario state is accessed via {@link ScenarioContext#current()}.
+ */
 public class AccountLifecycleSteps {
     private static final Logger log = LoggerFactory.getLogger(AccountLifecycleSteps.class);
     private final WebDriver driver = DriverManager.getDriver();
-    private final ScenarioContext context;
     private final AccountsOverviewPage overviewPage;
     private final OpenAccountPage openAccountPage;
     private final AccountDetailsPage detailsPage;
 
-    public AccountLifecycleSteps(ScenarioContext context) {
-        this.context = context;
+    public AccountLifecycleSteps() {
         this.overviewPage = new AccountsOverviewPage(driver);
         this.openAccountPage = new OpenAccountPage(driver);
         this.detailsPage = new AccountDetailsPage(driver);
+    }
+
+    private ScenarioContext ctx() {
+        return ScenarioContext.current();
     }
 
     @And("the user navigates to Accounts Overview and records the primary account ID and initial balance")
@@ -44,9 +51,9 @@ public class AccountLifecycleSteps {
         double initialBalance = overviewPage.getAccountBalance(primaryId);
         double portfolioTotal = overviewPage.getTotalBalance();
 
-        context.set(ContextKey.PRIMARY_ACCOUNT_ID, primaryId);
-        context.set(ContextKey.SOURCE_INITIAL_BALANCE, initialBalance);
-        context.set(ContextKey.TOTAL_PORTFOLIO_BALANCE, portfolioTotal);
+        ctx().set(ContextKey.PRIMARY_ACCOUNT_ID, primaryId);
+        ctx().set(ContextKey.SOURCE_INITIAL_BALANCE, initialBalance);
+        ctx().set(ContextKey.TOTAL_PORTFOLIO_BALANCE, portfolioTotal);
 
         log.info("Primary Account ID: {}, Initial Balance: ${}, Portfolio Total: ${}",
                 primaryId, initialBalance, portfolioTotal);
@@ -55,12 +62,12 @@ public class AccountLifecycleSteps {
     @When("the user opens a new {string} account with funds transferred from the primary account")
     public void openNewAccountWithFunds(String accountTypeStr) {
         AccountType type = AccountType.fromString(accountTypeStr);
-        String primaryAccountId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String primaryAccountId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
 
         openAccountPage.selectAccountType(type);
         if (primaryAccountId == null) {
             primaryAccountId = openAccountPage.getFirstAvailableSourceAccountId();
-            context.set(ContextKey.PRIMARY_ACCOUNT_ID, primaryAccountId);
+            ctx().set(ContextKey.PRIMARY_ACCOUNT_ID, primaryAccountId);
             log.info("Auto-discovered primary account ID: {}", primaryAccountId);
         }
         if (primaryAccountId != null) {
@@ -73,14 +80,14 @@ public class AccountLifecycleSteps {
     public void captureNewAccountNumber() {
         String newAccountId = openAccountPage.getNewAccountId();
         assertThat(newAccountId).as("New account number must not be null or empty").isNotBlank();
-        context.set(ContextKey.NEW_SAVINGS_ACCOUNT_ID, newAccountId);
+        ctx().set(ContextKey.NEW_SAVINGS_ACCOUNT_ID, newAccountId);
         log.info("Successfully created and captured new account ID: {}", newAccountId);
     }
 
     @Then("the new savings account should appear in the portfolio with the initial deposit")
     public void verifyNewSavingsAccountInPortfolio() {
         overviewPage.waitForOverviewTableToLoad();
-        String newId = context.getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
+        String newId = ctx().getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
         List<String> accountIds = overviewPage.getAccountIds();
 
         assertThat(accountIds).as("Newly created savings account must be present in portfolio").contains(newId);
@@ -93,10 +100,10 @@ public class AccountLifecycleSteps {
     @And("the primary account balance should be debited by the initial deposit")
     public void verifyPrimaryAccountDebitedByDeposit() {
         overviewPage.waitForOverviewTableToLoad();
-        String primaryId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
-        String newId = context.getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
+        String primaryId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String newId = ctx().getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
 
-        double initialPrimaryBal = context.getDouble(ContextKey.SOURCE_INITIAL_BALANCE);
+        double initialPrimaryBal = ctx().getDouble(ContextKey.SOURCE_INITIAL_BALANCE);
         double currentPrimaryBal = overviewPage.getAccountBalance(primaryId);
         double depositAmount = overviewPage.getAccountBalance(newId);
 
@@ -122,7 +129,7 @@ public class AccountLifecycleSteps {
 
     @When("the user opens the transaction details of the newly created savings account")
     public void openNewAccountTransactionDetails() {
-        String newId = context.getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
+        String newId = ctx().getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
         overviewPage.clickAccount(newId);
     }
 
@@ -142,12 +149,12 @@ public class AccountLifecycleSteps {
     public void openSecondaryAccount(String accountTypeStr) {
         overviewPage.navigation().clickOpenNewAccount();
         AccountType type = AccountType.fromString(accountTypeStr);
-        String primaryAccountId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String primaryAccountId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
 
         openAccountPage.selectAccountType(type);
         if (primaryAccountId == null) {
             primaryAccountId = openAccountPage.getFirstAvailableSourceAccountId();
-            context.set(ContextKey.PRIMARY_ACCOUNT_ID, primaryAccountId);
+            ctx().set(ContextKey.PRIMARY_ACCOUNT_ID, primaryAccountId);
             log.info("Auto-discovered primary account ID: {}", primaryAccountId);
         }
         if (primaryAccountId != null) {
@@ -155,7 +162,7 @@ public class AccountLifecycleSteps {
         }
         openAccountPage.clickOpenAccount();
         String secondaryId = openAccountPage.getNewAccountId();
-        context.set(ContextKey.SECONDARY_ACCOUNT_ID, secondaryId);
+        ctx().set(ContextKey.SECONDARY_ACCOUNT_ID, secondaryId);
         log.info("Opened secondary account: {}", secondaryId);
     }
 
@@ -163,7 +170,7 @@ public class AccountLifecycleSteps {
     public void openTertiaryAccount(String accountTypeStr) {
         overviewPage.navigation().clickOpenNewAccount();
         AccountType type = AccountType.fromString(accountTypeStr);
-        String primaryAccountId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String primaryAccountId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
 
         openAccountPage.selectAccountType(type);
         if (primaryAccountId != null) {
@@ -171,7 +178,7 @@ public class AccountLifecycleSteps {
         }
         openAccountPage.clickOpenAccount();
         String tertiaryId = openAccountPage.getNewAccountId();
-        context.set(ContextKey.NEW_SAVINGS_ACCOUNT_ID, tertiaryId);
+        ctx().set(ContextKey.NEW_SAVINGS_ACCOUNT_ID, tertiaryId);
         log.info("Opened tertiary account: {}", tertiaryId);
     }
 
@@ -180,18 +187,18 @@ public class AccountLifecycleSteps {
         overviewPage.navigation().clickAccountsOverview();
         overviewPage.waitForOverviewTableToLoad();
 
-        String primaryId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
-        String secondaryId = context.getString(ContextKey.SECONDARY_ACCOUNT_ID);
-        String tertiaryId = context.getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
+        String primaryId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String secondaryId = ctx().getString(ContextKey.SECONDARY_ACCOUNT_ID);
+        String tertiaryId = ctx().getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
 
         double b1 = overviewPage.getAccountBalance(primaryId);
         double b2 = overviewPage.getAccountBalance(secondaryId);
         double b3 = overviewPage.getAccountBalance(tertiaryId);
 
-        context.set(ContextKey.SOURCE_INITIAL_BALANCE, b1);
-        context.set(ContextKey.TARGET_INITIAL_BALANCE, b2);
-        context.set(ContextKey.TERTIARY_INITIAL_BALANCE, b3);
-        context.set(ContextKey.TOTAL_PORTFOLIO_BALANCE, overviewPage.getTotalBalance());
+        ctx().set(ContextKey.SOURCE_INITIAL_BALANCE, b1);
+        ctx().set(ContextKey.TARGET_INITIAL_BALANCE, b2);
+        ctx().set(ContextKey.TERTIARY_INITIAL_BALANCE, b3);
+        ctx().set(ContextKey.TOTAL_PORTFOLIO_BALANCE, overviewPage.getTotalBalance());
 
         log.info("Recorded initial trio balances: Primary=${}, Secondary=${}, Tertiary=${}", b1, b2, b3);
     }
@@ -199,7 +206,7 @@ public class AccountLifecycleSteps {
     @Then("the newly created account balance should equal {string}")
     public void verifyNewlyCreatedAccountBalance(String expectedBalanceStr) {
         overviewPage.waitForOverviewTableToLoad();
-        String newId = context.getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
+        String newId = ctx().getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
         double currentBal = overviewPage.getAccountBalance(newId);
         double expectedBal = Double.parseDouble(expectedBalanceStr);
 

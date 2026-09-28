@@ -1,7 +1,6 @@
 package com.parabank.automation.stepdefinitions;
 
 import com.parabank.automation.config.ConfigReader;
-import com.parabank.automation.context.ScenarioContext;
 import com.parabank.automation.driver.DriverManager;
 import com.parabank.automation.pages.LoginPage;
 import com.parabank.automation.pages.NavigationMenu;
@@ -15,15 +14,17 @@ import org.slf4j.LoggerFactory;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Common step definitions shared across all feature scenarios.
+ * Zero-arg constructor — no DI container required.
+ */
 public class CommonSteps {
     private static final Logger log = LoggerFactory.getLogger(CommonSteps.class);
     private final WebDriver driver = DriverManager.getDriver();
-    private final ScenarioContext context;
     private final LoginPage loginPage;
     private final NavigationMenu navigationMenu;
 
-    public CommonSteps(ScenarioContext context) {
-        this.context = context;
+    public CommonSteps() {
         this.loginPage = new LoginPage(driver);
         this.navigationMenu = loginPage.navigation();
     }

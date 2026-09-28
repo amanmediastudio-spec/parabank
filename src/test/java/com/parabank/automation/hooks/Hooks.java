@@ -3,9 +3,6 @@ package com.parabank.automation.hooks;
 import com.parabank.automation.config.ConfigReader;
 import com.parabank.automation.context.ScenarioContext;
 import com.parabank.automation.driver.DriverManager;
-import com.parabank.automation.models.CustomerProfile;
-import com.parabank.automation.pages.LoginPage;
-import com.parabank.automation.pages.RegistrationPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -17,14 +14,15 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Enterprise Cucumber Lifecycle Hooks managing driver lifecycle,
- * auto-healing demo environment accounts, and capturing screenshots on failure.
+ * failure screenshots, and ScenarioContext teardown.
+ * <p>
+ * Zero-arg constructor — no DI container required.
  */
 public class Hooks {
     private static final Logger log = LoggerFactory.getLogger(Hooks.class);
-    private final ScenarioContext scenarioContext;
 
-    public Hooks(ScenarioContext scenarioContext) {
-        this.scenarioContext = scenarioContext;
+    public Hooks() {
+        // Zero-arg: no DI injection needed
     }
 
     @Before(order = 0)
@@ -55,7 +53,7 @@ public class Hooks {
     @After(order = 0)
     public void tearDown() {
         log.info("Tearing down WebDriver session and clearing ScenarioContext.");
-        scenarioContext.clear();
+        ScenarioContext.reset();
         DriverManager.quitDriver();
     }
 }

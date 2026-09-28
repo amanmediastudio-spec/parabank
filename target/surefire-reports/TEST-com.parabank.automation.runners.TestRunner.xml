@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.parabank.automation.runners.TestRunner" time="10.429" tests="10" errors="0" skipped="9" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.parabank.automation.runners.TestRunner" time="82.661" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\parve\IdeaProjects\selenium-parabank-project\target\test-classes;C:\Users\parve\IdeaProjects\selenium-parabank-project\target\classes;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-java\4.29.0\selenium-java-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-api\4.29.0\selenium-api-4.29.0.jar;C:\Users\parve\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.29.0\selenium-chrome-driver-4.29.0.jar;C:\Users\parve\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.29.0\selenium-chromium-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-json\4.29.0\selenium-json-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.29.0\selenium-manager-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v131\4.29.0\selenium-devtools-v131-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v132\4.29.0\selenium-devtools-v132-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.29.0\selenium-devtools-v133-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.29.0\selenium-devtools-v85-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.29.0\selenium-edge-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.29.0\selenium-firefox-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-http\4.29.0\selenium-http-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.29.0\selenium-ie-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.29.0\selenium-remote-driver-4.29.0.jar;C:\Users\parve\.m2\repository\com\google\guava\guava\33.4.0-jre\guava-33.4.0-jre.jar;C:\Users\parve\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\parve\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\parve\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\parve\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\parve\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\parve\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.28.0-alpha\opentelemetry-semconv-1.28.0-alpha.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-api\1.46.0\opentelemetry-api-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-context\1.46.0\opentelemetry-context-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.46.0\opentelemetry-exporter-logging-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.46.0\opentelemetry-sdk-common-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.46.0\opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.46.0\opentelemetry-sdk-extension-autoconfigure-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.46.0-alpha\opentelemetry-api-incubator-1.46.0-alpha.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.46.0\opentelemetry-sdk-trace-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.46.0\opentelemetry-sdk-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.46.0\opentelemetry-sdk-metrics-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.46.0\opentelemetry-sdk-logs-1.46.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-os\4.29.0\selenium-os-4.29.0.jar;C:\Users\parve\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.29.0\selenium-safari-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-support\4.29.0\selenium-support-4.29.0.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-java\7.21.1\cucumber-java-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-core\7.21.1\cucumber-core-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-gherkin\7.21.1\cucumber-gherkin-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.21.1\cucumber-gherkin-messages-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\gherkin\31.0.0\gherkin-31.0.0.jar;C:\Users\parve\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\parve\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\parve\.m2\repository\io\cucumber\query\13.6.0\query-13.6.0.jar;C:\Users\parve\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\parve\.m2\repository\io\cucumber\datatable\7.21.1\datatable-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-plugin\7.21.1\cucumber-plugin-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\docstring\7.21.1\docstring-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\html-formatter\21.9.0\html-formatter-21.9.0.jar;C:\Users\parve\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\parve\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\parve\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.21.1\cucumber-junit-platform-engine-7.21.1.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar;C:\Users\parve\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-picocontainer\7.21.1\cucumber-picocontainer-7.21.1.jar;C:\Users\parve\.m2\repository\org\picocontainer\picocontainer\2.15\picocontainer-2.15.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite\1.11.4\junit-platform-suite-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-api\1.11.4\junit-platform-suite-api-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.11.4\junit-platform-suite-engine-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.11.4\junit-platform-suite-commons-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-launcher\1.11.4\junit-platform-launcher-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar;C:\Users\parve\.m2\repository\org\assertj\assertj-core\3.27.3\assertj-core-3.27.3.jar;C:\Users\parve\.m2\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;C:\Users\parve\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\parve\.m2\repository\ch\qos\logback\logback-classic\1.5.16\logback-classic-1.5.16.jar;C:\Users\parve\.m2\repository\ch\qos\logback\logback-core\1.5.16\logback-core-1.5.16.jar;"/>
+    <property name="java.class.path" value="C:\Users\parve\IdeaProjects\selenium-parabank-project\target\test-classes;C:\Users\parve\IdeaProjects\selenium-parabank-project\target\classes;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-java\4.29.0\selenium-java-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-api\4.29.0\selenium-api-4.29.0.jar;C:\Users\parve\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.29.0\selenium-chrome-driver-4.29.0.jar;C:\Users\parve\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.29.0\selenium-chromium-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-json\4.29.0\selenium-json-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.29.0\selenium-manager-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v131\4.29.0\selenium-devtools-v131-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v132\4.29.0\selenium-devtools-v132-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.29.0\selenium-devtools-v133-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.29.0\selenium-devtools-v85-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.29.0\selenium-edge-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.29.0\selenium-firefox-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-http\4.29.0\selenium-http-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.29.0\selenium-ie-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.29.0\selenium-remote-driver-4.29.0.jar;C:\Users\parve\.m2\repository\com\google\guava\guava\33.4.0-jre\guava-33.4.0-jre.jar;C:\Users\parve\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\parve\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\parve\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\parve\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\parve\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\parve\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.28.0-alpha\opentelemetry-semconv-1.28.0-alpha.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-api\1.46.0\opentelemetry-api-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-context\1.46.0\opentelemetry-context-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.46.0\opentelemetry-exporter-logging-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.46.0\opentelemetry-sdk-common-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.46.0\opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.46.0\opentelemetry-sdk-extension-autoconfigure-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.46.0-alpha\opentelemetry-api-incubator-1.46.0-alpha.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.46.0\opentelemetry-sdk-trace-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.46.0\opentelemetry-sdk-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.46.0\opentelemetry-sdk-metrics-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.46.0\opentelemetry-sdk-logs-1.46.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-os\4.29.0\selenium-os-4.29.0.jar;C:\Users\parve\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.29.0\selenium-safari-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-support\4.29.0\selenium-support-4.29.0.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-java\7.21.1\cucumber-java-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-core\7.21.1\cucumber-core-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-gherkin\7.21.1\cucumber-gherkin-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.21.1\cucumber-gherkin-messages-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\gherkin\31.0.0\gherkin-31.0.0.jar;C:\Users\parve\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\parve\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\parve\.m2\repository\io\cucumber\query\13.6.0\query-13.6.0.jar;C:\Users\parve\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\parve\.m2\repository\io\cucumber\datatable\7.21.1\datatable-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-plugin\7.21.1\cucumber-plugin-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\docstring\7.21.1\docstring-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\html-formatter\21.9.0\html-formatter-21.9.0.jar;C:\Users\parve\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\parve\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\parve\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.21.1\cucumber-junit-platform-engine-7.21.1.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar;C:\Users\parve\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite\1.11.4\junit-platform-suite-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-api\1.11.4\junit-platform-suite-api-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.11.4\junit-platform-suite-engine-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.11.4\junit-platform-suite-commons-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-launcher\1.11.4\junit-platform-launcher-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar;C:\Users\parve\.m2\repository\org\assertj\assertj-core\3.27.3\assertj-core-3.27.3.jar;C:\Users\parve\.m2\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;C:\Users\parve\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\parve\.m2\repository\ch\qos\logback\logback-classic\1.5.16\logback-classic-1.5.16.jar;C:\Users\parve\.m2\repository\ch\qos\logback\logback-core\1.5.16\logback-core-1.5.16.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21.0.11\bin"/>
-    <property name="sun.java.command" value="C:\Users\parve\AppData\Local\Temp\surefire6752855851429324936\surefirebooter-20260928153502181_3.jar C:\Users\parve\AppData\Local\Temp\surefire6752855851429324936 2026-09-28T15-35-02_091-jvmRun1 surefire-20260928153502181_1tmp surefire_0-20260928153502181_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\parve\AppData\Local\Temp\surefire4304146799293422454\surefirebooter-20260928154741921_3.jar C:\Users\parve\AppData\Local\Temp\surefire4304146799293422454 2026-09-28T15-47-41_829-jvmRun1 surefire-20260928154741921_1tmp surefire_0-20260928154741921_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\parve\IdeaProjects\selenium-parabank-project\target\test-classes;C:\Users\parve\IdeaProjects\selenium-parabank-project\target\classes;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-java\4.29.0\selenium-java-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-api\4.29.0\selenium-api-4.29.0.jar;C:\Users\parve\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.29.0\selenium-chrome-driver-4.29.0.jar;C:\Users\parve\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.29.0\selenium-chromium-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-json\4.29.0\selenium-json-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.29.0\selenium-manager-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v131\4.29.0\selenium-devtools-v131-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v132\4.29.0\selenium-devtools-v132-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.29.0\selenium-devtools-v133-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.29.0\selenium-devtools-v85-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.29.0\selenium-edge-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.29.0\selenium-firefox-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-http\4.29.0\selenium-http-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.29.0\selenium-ie-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.29.0\selenium-remote-driver-4.29.0.jar;C:\Users\parve\.m2\repository\com\google\guava\guava\33.4.0-jre\guava-33.4.0-jre.jar;C:\Users\parve\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\parve\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\parve\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\parve\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\parve\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\parve\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.28.0-alpha\opentelemetry-semconv-1.28.0-alpha.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-api\1.46.0\opentelemetry-api-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-context\1.46.0\opentelemetry-context-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.46.0\opentelemetry-exporter-logging-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.46.0\opentelemetry-sdk-common-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.46.0\opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.46.0\opentelemetry-sdk-extension-autoconfigure-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.46.0-alpha\opentelemetry-api-incubator-1.46.0-alpha.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.46.0\opentelemetry-sdk-trace-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.46.0\opentelemetry-sdk-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.46.0\opentelemetry-sdk-metrics-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.46.0\opentelemetry-sdk-logs-1.46.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-os\4.29.0\selenium-os-4.29.0.jar;C:\Users\parve\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.29.0\selenium-safari-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-support\4.29.0\selenium-support-4.29.0.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-java\7.21.1\cucumber-java-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-core\7.21.1\cucumber-core-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-gherkin\7.21.1\cucumber-gherkin-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.21.1\cucumber-gherkin-messages-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\gherkin\31.0.0\gherkin-31.0.0.jar;C:\Users\parve\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\parve\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\parve\.m2\repository\io\cucumber\query\13.6.0\query-13.6.0.jar;C:\Users\parve\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\parve\.m2\repository\io\cucumber\datatable\7.21.1\datatable-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-plugin\7.21.1\cucumber-plugin-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\docstring\7.21.1\docstring-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\html-formatter\21.9.0\html-formatter-21.9.0.jar;C:\Users\parve\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\parve\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\parve\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.21.1\cucumber-junit-platform-engine-7.21.1.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar;C:\Users\parve\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-picocontainer\7.21.1\cucumber-picocontainer-7.21.1.jar;C:\Users\parve\.m2\repository\org\picocontainer\picocontainer\2.15\picocontainer-2.15.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite\1.11.4\junit-platform-suite-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-api\1.11.4\junit-platform-suite-api-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.11.4\junit-platform-suite-engine-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.11.4\junit-platform-suite-commons-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-launcher\1.11.4\junit-platform-launcher-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar;C:\Users\parve\.m2\repository\org\assertj\assertj-core\3.27.3\assertj-core-3.27.3.jar;C:\Users\parve\.m2\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;C:\Users\parve\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\parve\.m2\repository\ch\qos\logback\logback-classic\1.5.16\logback-classic-1.5.16.jar;C:\Users\parve\.m2\repository\ch\qos\logback\logback-core\1.5.16\logback-core-1.5.16.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\parve\IdeaProjects\selenium-parabank-project\target\test-classes;C:\Users\parve\IdeaProjects\selenium-parabank-project\target\classes;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-java\4.29.0\selenium-java-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-api\4.29.0\selenium-api-4.29.0.jar;C:\Users\parve\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.29.0\selenium-chrome-driver-4.29.0.jar;C:\Users\parve\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.29.0\selenium-chromium-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-json\4.29.0\selenium-json-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.29.0\selenium-manager-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v131\4.29.0\selenium-devtools-v131-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v132\4.29.0\selenium-devtools-v132-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.29.0\selenium-devtools-v133-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.29.0\selenium-devtools-v85-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.29.0\selenium-edge-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.29.0\selenium-firefox-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-http\4.29.0\selenium-http-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.29.0\selenium-ie-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.29.0\selenium-remote-driver-4.29.0.jar;C:\Users\parve\.m2\repository\com\google\guava\guava\33.4.0-jre\guava-33.4.0-jre.jar;C:\Users\parve\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\parve\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\parve\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\parve\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\parve\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\parve\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.28.0-alpha\opentelemetry-semconv-1.28.0-alpha.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-api\1.46.0\opentelemetry-api-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-context\1.46.0\opentelemetry-context-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.46.0\opentelemetry-exporter-logging-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.46.0\opentelemetry-sdk-common-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.46.0\opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.46.0\opentelemetry-sdk-extension-autoconfigure-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.46.0-alpha\opentelemetry-api-incubator-1.46.0-alpha.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.46.0\opentelemetry-sdk-trace-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.46.0\opentelemetry-sdk-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.46.0\opentelemetry-sdk-metrics-1.46.0.jar;C:\Users\parve\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.46.0\opentelemetry-sdk-logs-1.46.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-os\4.29.0\selenium-os-4.29.0.jar;C:\Users\parve\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.29.0\selenium-safari-driver-4.29.0.jar;C:\Users\parve\.m2\repository\org\seleniumhq\selenium\selenium-support\4.29.0\selenium-support-4.29.0.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-java\7.21.1\cucumber-java-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-core\7.21.1\cucumber-core-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-gherkin\7.21.1\cucumber-gherkin-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.21.1\cucumber-gherkin-messages-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\gherkin\31.0.0\gherkin-31.0.0.jar;C:\Users\parve\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\parve\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\parve\.m2\repository\io\cucumber\query\13.6.0\query-13.6.0.jar;C:\Users\parve\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\parve\.m2\repository\io\cucumber\datatable\7.21.1\datatable-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-plugin\7.21.1\cucumber-plugin-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\docstring\7.21.1\docstring-7.21.1.jar;C:\Users\parve\.m2\repository\io\cucumber\html-formatter\21.9.0\html-formatter-21.9.0.jar;C:\Users\parve\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\parve\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\parve\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\parve\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.21.1\cucumber-junit-platform-engine-7.21.1.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar;C:\Users\parve\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite\1.11.4\junit-platform-suite-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-api\1.11.4\junit-platform-suite-api-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.11.4\junit-platform-suite-engine-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.11.4\junit-platform-suite-commons-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\platform\junit-platform-launcher\1.11.4\junit-platform-launcher-1.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar;C:\Users\parve\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar;C:\Users\parve\.m2\repository\org\assertj\assertj-core\3.27.3\assertj-core-3.27.3.jar;C:\Users\parve\.m2\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;C:\Users\parve\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\parve\.m2\repository\ch\qos\logback\logback-classic\1.5.16\logback-classic-1.5.16.jar;C:\Users\parve\.m2\repository\ch\qos\logback\logback-core\1.5.16\logback-core-1.5.16.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\parve"/>
     <property name="user.language" value="en"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\parve\AppData\Local\Temp\surefire6752855851429324936\surefirebooter-20260928153502181_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\parve\AppData\Local\Temp\surefire4304146799293422454\surefirebooter-20260928154741921_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.11+9-LTS-211"/>
@@ -45,7 +45,6 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\parve\AppData\Local\Temp\"/>
     <property name="java.version" value="21.0.11"/>
-    <property name="cucumber.filter.tags" value="@EndToEnd"/>
     <property name="user.dir" value="C:\Users\parve\IdeaProjects\selenium-parabank-project"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
@@ -59,94 +58,624 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="Account Lifecycle and Balance Integrity - Successfully open new savings account and verify ledger balance integrity" classname="Account Lifecycle and Balance Integrity" time="0.0">
-    <skipped message="&apos;cucumber.filter.tags=@EndToEnd&apos; did not match this scenario"/>
+  <testcase name="Account Lifecycle and Balance Integrity - Successfully open new savings account and verify ledger balance integrity" classname="Account Lifecycle and Balance Integrity" time="8.73">
+    <system-out><![CDATA[
+@AccountLifecycle @Regression @RequiresAuth
+Scenario: Successfully open new savings account and verify ledger balance integrity                  &amp#27;[90m# features/01_account_lifecycle_balance_integrity.feature:7&amp#27;[0m
+2026-09-28 15:47:43.027 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:47:43.028 [main] INFO  com.parabank.automation.hooks.Hooks - STARTING SCENARIO: Successfully open new savings account and verify ledger balance integrity
+2026-09-28 15:47:43.029 [main] INFO  com.parabank.automation.hooks.Hooks - Tags: [@AccountLifecycle, @Regression, @RequiresAuth]
+2026-09-28 15:47:43.029 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:47:43.031 [main] INFO  c.p.automation.config.ConfigReader - Successfully loaded configuration properties from config.properties
+2026-09-28 15:47:43.032 [main] INFO  c.p.automation.driver.DriverManager - Initializing WebDriver instance for browser: chrome, headless: true
+2026-09-28 15:47:43.864 [main] INFO  c.p.automation.driver.DriverManager - WebDriver initialized successfully on thread main
+2026-09-28 15:47:45.465 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Logging into Parabank with username 'HellBound'
+2026-09-28 15:47:45.933 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
+2026-09-28 15:47:45.942 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
+2026-09-28 15:47:46.000 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
+2026-09-28 15:47:46.069 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user logs into Parabank with credentials &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m                     &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsInWithCredentials(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:47:47.359 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:47.383 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:47.438 [main] INFO  c.p.a.pages.AccountsOverviewPage - Found 6 active accounts: [23889, 24888, 24999, 25332, 25443, 25554]
+2026-09-28 15:47:47.481 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:47.516 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:47.551 [main] INFO  c.p.a.s.AccountLifecycleSteps - Primary Account ID: 23889, Initial Balance: $-192.5, Portfolio Total: $1370.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user navigates to Accounts Overview and records the primary account ID and initial balance&amp#27;[0m &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.recordPrimaryAccountAndInitialBalance()&amp#27;[0m
+2026-09-28 15:47:47.552 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'openaccount.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'openaccount.htm')]
+2026-09-28 15:47:47.552 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'openaccount.htm')]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Open New Account&amp#27;[0m                                                        &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToOpenNewAccount()&amp#27;[0m
+2026-09-28 15:47:48.409 [main] INFO  c.p.automation.pages.OpenAccountPage - Selecting account type: SAVINGS
+2026-09-28 15:47:48.444 [main] INFO  c.p.automation.utils.ElementActions - Selecting option value '1' from dropdown: By.id: type
+2026-09-28 15:47:48.499 [main] INFO  c.p.automation.pages.OpenAccountPage - Selecting source account: 23889
+2026-09-28 15:47:48.531 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.id: fromAccountId
+2026-09-28 15:47:48.571 [main] INFO  c.p.automation.pages.OpenAccountPage - Submitting open account request
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user opens a new &amp#27;[0m&amp#27;[32m&amp#27;[1m"SAVINGS"&amp#27;[0m&amp#27;[32m account with funds transferred from the primary account&amp#27;[0m         &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.openNewAccountWithFunds(java.lang.String)&amp#27;[0m
+2026-09-28 15:47:49.143 [main] INFO  c.p.automation.pages.OpenAccountPage - Newly created account number: 27663
+2026-09-28 15:47:49.145 [main] INFO  c.p.a.s.AccountLifecycleSteps - Successfully created and captured new account ID: 27663
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32ma new account number is generated and captured&amp#27;[0m                                                &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.captureNewAccountNumber()&amp#27;[0m
+2026-09-28 15:47:49.146 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'overview.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:47:49.146 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Accounts Overview&amp#27;[0m                                                       &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToAccountsOverview()&amp#27;[0m
+2026-09-28 15:47:50.010 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.032 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.086 [main] INFO  c.p.a.pages.AccountsOverviewPage - Found 7 active accounts: [23889, 24888, 24999, 25332, 25443, 25554, 27663]
+2026-09-28 15:47:50.087 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.121 [main] INFO  c.p.a.s.AccountLifecycleSteps - New account 27663 verified with initial deposit of $100.0
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe new savings account should appear in the portfolio with the initial deposit&amp#27;[0m               &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.verifyNewSavingsAccountInPortfolio()&amp#27;[0m
+2026-09-28 15:47:50.122 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.142 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.175 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe primary account balance should be debited by the initial deposit&amp#27;[0m                           &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.verifyPrimaryAccountDebitedByDeposit()&amp#27;[0m
+2026-09-28 15:47:50.208 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.226 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.279 [main] INFO  c.p.a.pages.AccountsOverviewPage - Found 7 active accounts: [23889, 24888, 24999, 25332, 25443, 25554, 27663]
+2026-09-28 15:47:50.279 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.308 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.338 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.372 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.406 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.436 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.467 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:50.498 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe portfolio total balance should equal the mathematical sum of all accounts&amp#27;[0m                  &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.verifyPortfolioTotalEqualsSum()&amp#27;[0m
+2026-09-28 15:47:50.526 [main] INFO  c.p.a.pages.AccountsOverviewPage - Clicking on account link: 27663
+2026-09-28 15:47:50.535 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //table[@id='accountTable']//a[normalize-space()='27663']
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user opens the transaction details of the newly created savings account&amp#27;[0m                   &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.openNewAccountTransactionDetails()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe account details should display account type &amp#27;[0m&amp#27;[32m&amp#27;[1m"SAVINGS"&amp#27;[0m&amp#27;[32m and initial deposit transaction&amp#27;[0m     &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.verifyAccountTypeAndInitialTransaction(java.lang.String)&amp#27;[0m
+2026-09-28 15:47:51.453 [main] INFO  com.parabank.automation.hooks.Hooks - Scenario PASSED: Successfully open new savings account and verify ledger balance integrity
+2026-09-28 15:47:51.454 [main] INFO  com.parabank.automation.hooks.Hooks - Tearing down WebDriver session and clearing ScenarioContext.
+2026-09-28 15:47:51.538 [main] INFO  c.p.automation.driver.DriverManager - WebDriver successfully terminated on thread main
+]]></system-out>
+    <system-err><![CDATA[Sept 28, 2026 3:47:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 153
+Sept 28, 2026 3:47:43 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 153.0.8010.53. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.29.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
   </testcase>
-  <testcase name="Fund Transfer Symmetry and Audit - Execute internal funds transfer and audit debit-credit consistency" classname="Fund Transfer Symmetry and Audit" time="0.0">
-    <skipped message="&apos;cucumber.filter.tags=@EndToEnd&apos; did not match this scenario"/>
+  <testcase name="Fund Transfer Symmetry and Audit - Execute internal funds transfer and audit debit-credit consistency" classname="Fund Transfer Symmetry and Audit" time="9.777">
+    <system-out><![CDATA[
+@FundTransfer @Regression @RequiresAuth
+Scenario: Execute internal funds transfer and audit debit-credit consistency                       &amp#27;[90m# features/02_fund_transfer_symmetry_audit.feature:7&amp#27;[0m
+2026-09-28 15:47:51.550 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:47:51.550 [main] INFO  com.parabank.automation.hooks.Hooks - STARTING SCENARIO: Execute internal funds transfer and audit debit-credit consistency
+2026-09-28 15:47:51.550 [main] INFO  com.parabank.automation.hooks.Hooks - Tags: [@FundTransfer, @Regression, @RequiresAuth]
+2026-09-28 15:47:51.550 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:47:51.550 [main] INFO  c.p.automation.driver.DriverManager - Initializing WebDriver instance for browser: chrome, headless: true
+2026-09-28 15:47:52.103 [main] INFO  c.p.automation.driver.DriverManager - WebDriver initialized successfully on thread main
+2026-09-28 15:47:53.733 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Logging into Parabank with username 'HellBound'
+2026-09-28 15:47:54.215 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
+2026-09-28 15:47:54.222 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
+2026-09-28 15:47:54.269 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
+2026-09-28 15:47:54.322 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user logs into Parabank with credentials &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m                   &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsInWithCredentials(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:47:55.643 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:55.666 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:55.731 [main] INFO  c.p.a.pages.AccountsOverviewPage - Found 7 active accounts: [23889, 24888, 24999, 25332, 25443, 25554, 27663]
+2026-09-28 15:47:55.731 [main] INFO  c.p.a.s.TransferFundsSteps - Source Account ID: 23889, Target Account ID: 24888
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user ensures at least two active accounts exist, capturing source and target account IDs&amp#27;[0m &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.ensureAtLeastTwoAccountsExist()&amp#27;[0m
+2026-09-28 15:47:55.732 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:55.753 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:55.787 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:55.821 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:55.853 [main] INFO  c.p.a.s.TransferFundsSteps - Initial Source Bal: $-292.5, Target Bal: $177.5, Total: $1370.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user records initial balances for both source and target accounts&amp#27;[0m                        &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.recordInitialBalances()&amp#27;[0m
+2026-09-28 15:47:55.853 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'transfer.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
+2026-09-28 15:47:55.853 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
+2026-09-28 15:47:56.716 [main] INFO  c.p.a.pages.TransferFundsPage - Initiating fund transfer of $50.0 from 23889 to 24888
+2026-09-28 15:47:56.760 [main] INFO  c.p.a.pages.TransferFundsPage - Entering transfer amount: 50.0
+2026-09-28 15:47:56.761 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '50.00' into element: By.id: amount
+2026-09-28 15:47:56.810 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting source account: 23889
+2026-09-28 15:47:56.829 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.id: fromAccountId
+2026-09-28 15:47:56.871 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting target account: 24888
+2026-09-28 15:47:56.894 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '24888' from dropdown: By.id: toAccountId
+2026-09-28 15:47:56.942 [main] INFO  c.p.a.pages.TransferFundsPage - Clicking Transfer button
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user transfers &amp#27;[0m&amp#27;[32m&amp#27;[1m"50.00"&amp#27;[0m&amp#27;[32m from the source account to the target account&amp#27;[0m                    &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.transferFundsBetweenAccounts(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32ma transfer confirmation message should be displayed with amount &amp#27;[0m&amp#27;[32m&amp#27;[1m"50.00"&amp#27;[0m                     &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.verifyTransferConfirmation(java.lang.String)&amp#27;[0m
+2026-09-28 15:47:57.504 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'overview.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:47:57.504 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Accounts Overview&amp#27;[0m                                                     &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToAccountsOverview()&amp#27;[0m
+2026-09-28 15:47:58.376 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:58.392 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe source account balance should be decreased by exactly &amp#27;[0m&amp#27;[32m&amp#27;[1m"50.00"&amp#27;[0m                           &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.verifySourceBalanceDecreased(java.lang.String)&amp#27;[0m
+2026-09-28 15:47:58.421 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:58.437 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe target account balance should be increased by exactly &amp#27;[0m&amp#27;[32m&amp#27;[1m"50.00"&amp#27;[0m                            &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.verifyTargetBalanceIncreased(java.lang.String)&amp#27;[0m
+2026-09-28 15:47:58.465 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:47:58.484 [main] INFO  c.p.a.pages.AccountsOverviewPage - Clicking on account link: 23889
+2026-09-28 15:47:58.492 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //table[@id='accountTable']//a[normalize-space()='23889']
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user views the transaction history of the source account&amp#27;[0m                                &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.viewSourceAccountTransactions()&amp#27;[0m
+2026-09-28 15:47:59.430 [main] INFO  c.p.a.pages.AccountDetailsPage - Found matching transaction: Funds Transfer Sent with amount: 50.0
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32ma debit transaction of &amp#27;[0m&amp#27;[32m&amp#27;[1m"50.00"&amp#27;[0m&amp#27;[32m should be recorded&amp#27;[0m                                           &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.verifyDebitTransaction(java.lang.String)&amp#27;[0m
+2026-09-28 15:47:59.432 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'overview.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:47:59.432 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:48:00.298 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:00.315 [main] INFO  c.p.a.pages.AccountsOverviewPage - Clicking on account link: 24888
+2026-09-28 15:48:00.323 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //table[@id='accountTable']//a[normalize-space()='24888']
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user views the transaction history of the target account&amp#27;[0m                                &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.viewTargetAccountTransactions()&amp#27;[0m
+2026-09-28 15:48:01.242 [main] INFO  c.p.a.pages.AccountDetailsPage - Found matching transaction: Funds Transfer Received with amount: 50.0
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32ma credit transaction of &amp#27;[0m&amp#27;[32m&amp#27;[1m"50.00"&amp#27;[0m&amp#27;[32m should be recorded&amp#27;[0m                                          &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.verifyCreditTransaction(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:01.242 [main] INFO  com.parabank.automation.hooks.Hooks - Scenario PASSED: Execute internal funds transfer and audit debit-credit consistency
+2026-09-28 15:48:01.243 [main] INFO  com.parabank.automation.hooks.Hooks - Tearing down WebDriver session and clearing ScenarioContext.
+2026-09-28 15:48:01.318 [main] INFO  c.p.automation.driver.DriverManager - WebDriver successfully terminated on thread main
+]]></system-out>
+    <system-err><![CDATA[Sept 28, 2026 3:47:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 153
+Sept 28, 2026 3:47:52 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 153.0.8010.53. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.29.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
   </testcase>
-  <testcase name="Third-Party Bill Payment Processing - Successfully process third-party bill payment and verify ledger deduction" classname="Third-Party Bill Payment Processing" time="0.0">
-    <skipped message="&apos;cucumber.filter.tags=@EndToEnd&apos; did not match this scenario"/>
+  <testcase name="Third-Party Bill Payment Processing - Successfully process third-party bill payment and verify ledger deduction" classname="Third-Party Bill Payment Processing" time="7.642">
+    <system-out><![CDATA[
+@BillPay @Regression @RequiresAuth
+Scenario: Successfully process third-party bill payment and verify ledger deduction             &amp#27;[90m# features/03_third_party_bill_payment.feature:7&amp#27;[0m
+2026-09-28 15:48:01.331 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:01.331 [main] INFO  com.parabank.automation.hooks.Hooks - STARTING SCENARIO: Successfully process third-party bill payment and verify ledger deduction
+2026-09-28 15:48:01.331 [main] INFO  com.parabank.automation.hooks.Hooks - Tags: [@BillPay, @Regression, @RequiresAuth]
+2026-09-28 15:48:01.332 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:01.332 [main] INFO  c.p.automation.driver.DriverManager - Initializing WebDriver instance for browser: chrome, headless: true
+2026-09-28 15:48:01.889 [main] INFO  c.p.automation.driver.DriverManager - WebDriver initialized successfully on thread main
+2026-09-28 15:48:03.536 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Logging into Parabank with username 'HellBound'
+2026-09-28 15:48:04.031 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
+2026-09-28 15:48:04.037 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
+2026-09-28 15:48:04.084 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
+2026-09-28 15:48:04.127 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user logs into Parabank with credentials &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m                &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsInWithCredentials(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:48:05.441 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:05.459 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:05.515 [main] INFO  c.p.a.pages.AccountsOverviewPage - Found 7 active accounts: [23889, 24888, 24999, 25332, 25443, 25554, 27663]
+2026-09-28 15:48:05.515 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:05.542 [main] INFO  c.p.a.s.BillPaymentSteps - Active checking account 23889 recorded with balance: $-342.5
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user records the available balance of the active checking account&amp#27;[0m                     &amp#27;[90m# com.parabank.automation.stepdefinitions.BillPaymentSteps.recordActiveCheckingBalance()&amp#27;[0m
+2026-09-28 15:48:05.544 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'billpay.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'billpay.htm')]
+2026-09-28 15:48:05.544 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'billpay.htm')]
+2026-09-28 15:48:05.906 [main] INFO  c.p.automation.pages.BillPayPage - Filling Bill Pay form for payee: Apex Energy Grid
+2026-09-28 15:48:05.906 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'Apex Energy Grid' into element: By.name: payee.name
+2026-09-28 15:48:05.943 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '742 Evergreen Terr' into element: By.name: payee.address.street
+2026-09-28 15:48:05.980 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'Metro' into element: By.name: payee.address.city
+2026-09-28 15:48:06.018 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'NY' into element: By.name: payee.address.state
+2026-09-28 15:48:06.055 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '10001' into element: By.name: payee.address.zipCode
+2026-09-28 15:48:06.095 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '555-019-2834' into element: By.name: payee.phoneNumber
+2026-09-28 15:48:06.138 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '99887766' into element: By.name: payee.accountNumber
+2026-09-28 15:48:06.175 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '99887766' into element: By.name: verifyAccount
+2026-09-28 15:48:06.212 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '45.50' into element: By.name: amount
+2026-09-28 15:48:06.305 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.name: fromAccountId
+2026-09-28 15:48:06.360 [main] INFO  c.p.automation.pages.BillPayPage - Clicking Send Payment button
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user pays a utility bill with the following details:&amp#27;[0m                                 &amp#27;[90m# com.parabank.automation.stepdefinitions.BillPaymentSteps.payUtilityBill(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | Payee Name       | Address            | City  | State | Zip Code | Phone Number | Account Number | Amount |
+    | Apex Energy Grid | 742 Evergreen Terr | Metro | NY    | 10001    | 555-019-2834 | 99887766       | 45.50  |
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe bill payment confirmation should display payee &amp#27;[0m&amp#27;[32m&amp#27;[1m"Apex Energy Grid"&amp#27;[0m&amp#27;[32m and amount &amp#27;[0m&amp#27;[32m&amp#27;[1m"45.50"&amp#27;[0m &amp#27;[90m# com.parabank.automation.stepdefinitions.BillPaymentSteps.verifyBillPaymentConfirmation(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:48:06.929 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'overview.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:48:06.930 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Accounts Overview&amp#27;[0m                                                  &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToAccountsOverview()&amp#27;[0m
+2026-09-28 15:48:07.806 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:07.821 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe checking account balance should be reduced by &amp#27;[0m&amp#27;[32m&amp#27;[1m"45.50"&amp#27;[0m                                &amp#27;[90m# com.parabank.automation.stepdefinitions.BillPaymentSteps.verifyCheckingBalanceReduced(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:07.847 [main] INFO  c.p.a.pages.AccountsOverviewPage - Clicking on account link: 23889
+2026-09-28 15:48:07.856 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //table[@id='accountTable']//a[normalize-space()='23889']
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to the checking account transaction history&amp#27;[0m                           &amp#27;[90m# com.parabank.automation.stepdefinitions.BillPaymentSteps.navigateToCheckingTransactionHistory()&amp#27;[0m
+2026-09-28 15:48:08.854 [main] INFO  c.p.a.pages.AccountDetailsPage - Found matching transaction: Apex Energy Grid with amount: 45.5
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32ma bill payment transaction to &amp#27;[0m&amp#27;[32m&amp#27;[1m"Apex Energy Grid"&amp#27;[0m&amp#27;[32m for &amp#27;[0m&amp#27;[32m&amp#27;[1m"45.50"&amp#27;[0m&amp#27;[32m should be present&amp#27;[0m           &amp#27;[90m# com.parabank.automation.stepdefinitions.BillPaymentSteps.verifyBillPaymentTransactionRecorded(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:48:08.854 [main] INFO  com.parabank.automation.hooks.Hooks - Scenario PASSED: Successfully process third-party bill payment and verify ledger deduction
+2026-09-28 15:48:08.855 [main] INFO  com.parabank.automation.hooks.Hooks - Tearing down WebDriver session and clearing ScenarioContext.
+2026-09-28 15:48:08.964 [main] INFO  c.p.automation.driver.DriverManager - WebDriver successfully terminated on thread main
+]]></system-out>
+    <system-err><![CDATA[Sept 28, 2026 3:48:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 153
+Sept 28, 2026 3:48:01 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 153.0.8010.53. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.29.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
   </testcase>
-  <testcase name="Multi-Criteria Transaction Search - Find transactions across amount and transaction ID criteria" classname="Multi-Criteria Transaction Search" time="0.0">
-    <skipped message="&apos;cucumber.filter.tags=@EndToEnd&apos; did not match this scenario"/>
+  <testcase name="Multi-Criteria Transaction Search - Find transactions across amount and transaction ID criteria" classname="Multi-Criteria Transaction Search" time="7.754">
+    <system-out><![CDATA[
+@TransactionSearch @Regression @RequiresAuth
+Scenario: Find transactions across amount and transaction ID criteria                        &amp#27;[90m# features/04_multi_criteria_transaction_search.feature:7&amp#27;[0m
+2026-09-28 15:48:08.970 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:08.970 [main] INFO  com.parabank.automation.hooks.Hooks - STARTING SCENARIO: Find transactions across amount and transaction ID criteria
+2026-09-28 15:48:08.970 [main] INFO  com.parabank.automation.hooks.Hooks - Tags: [@TransactionSearch, @Regression, @RequiresAuth]
+2026-09-28 15:48:08.970 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:08.970 [main] INFO  c.p.automation.driver.DriverManager - Initializing WebDriver instance for browser: chrome, headless: true
+2026-09-28 15:48:09.500 [main] INFO  c.p.automation.driver.DriverManager - WebDriver initialized successfully on thread main
+2026-09-28 15:48:11.145 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Logging into Parabank with username 'HellBound'
+2026-09-28 15:48:11.911 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
+2026-09-28 15:48:11.917 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
+2026-09-28 15:48:11.961 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
+2026-09-28 15:48:12.004 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user logs into Parabank with credentials &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m             &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsInWithCredentials(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:48:13.297 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:13.315 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:13.374 [main] INFO  c.p.a.pages.AccountsOverviewPage - Found 7 active accounts: [23889, 24888, 24999, 25332, 25443, 25554, 27663]
+2026-09-28 15:48:13.375 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'transfer.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
+2026-09-28 15:48:13.375 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
+2026-09-28 15:48:14.248 [main] INFO  c.p.a.pages.TransferFundsPage - Initiating fund transfer of $27.5 from 23889 to 24888
+2026-09-28 15:48:14.291 [main] INFO  c.p.a.pages.TransferFundsPage - Entering transfer amount: 27.5
+2026-09-28 15:48:14.292 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '27.50' into element: By.id: amount
+2026-09-28 15:48:14.332 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting source account: 23889
+2026-09-28 15:48:14.352 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.id: fromAccountId
+2026-09-28 15:48:14.385 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting target account: 24888
+2026-09-28 15:48:14.404 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '24888' from dropdown: By.id: toAccountId
+2026-09-28 15:48:14.449 [main] INFO  c.p.a.pages.TransferFundsPage - Clicking Transfer button
+2026-09-28 15:48:14.991 [main] INFO  c.p.a.s.TransactionSearchSteps - Executed unique transaction generator transfer of $27.5
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user executes a unique transfer of &amp#27;[0m&amp#27;[32m&amp#27;[1m"27.50"&amp#27;[0m&amp#27;[32m to generate an identifiable transaction&amp#27;[0m &amp#27;[90m# com.parabank.automation.stepdefinitions.TransactionSearchSteps.executeUniqueTransfer(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:14.992 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'findtrans.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'findtrans.htm')]
+2026-09-28 15:48:14.992 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'findtrans.htm')]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Find Transactions&amp#27;[0m                                               &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToFindTransactions()&amp#27;[0m
+2026-09-28 15:48:15.336 [main] INFO  c.p.a.pages.FindTransactionsPage - Selecting account for transaction search: 23889
+2026-09-28 15:48:15.367 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.id: accountId
+2026-09-28 15:48:15.406 [main] INFO  c.p.a.pages.FindTransactionsPage - Searching transactions by Amount: 27.5
+2026-09-28 15:48:15.414 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '27.50' into element: By.id: amount
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32msearches for transactions with amount &amp#27;[0m&amp#27;[32m&amp#27;[1m"27.50"&amp#27;[0m                                          &amp#27;[90m# com.parabank.automation.stepdefinitions.TransactionSearchSteps.searchTransactionsByAmount(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe search results should contain the transaction with amount &amp#27;[0m&amp#27;[32m&amp#27;[1m"27.50"&amp#27;[0m                 &amp#27;[90m# com.parabank.automation.stepdefinitions.TransactionSearchSteps.verifySearchResultsContainAmount(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:16.030 [main] INFO  c.p.a.s.TransactionSearchSteps - Captured Transaction ID: 43114
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user captures the transaction ID from the results&amp#27;[0m                                 &amp#27;[90m# com.parabank.automation.stepdefinitions.TransactionSearchSteps.captureTransactionIdFromResults()&amp#27;[0m
+2026-09-28 15:48:16.030 [main] INFO  c.p.a.pages.FindTransactionsPage - Searching transactions by ID: 43114
+2026-09-28 15:48:16.041 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '43114' into element: By.id: transactionId
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32msearches for the transaction by its exact ID&amp#27;[0m                                           &amp#27;[90m# com.parabank.automation.stepdefinitions.TransactionSearchSteps.searchByExactTransactionId()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe search results should contain the matching transaction ID&amp#27;[0m                         &amp#27;[90m# com.parabank.automation.stepdefinitions.TransactionSearchSteps.verifyMatchingTransactionIdInResults()&amp#27;[0m
+2026-09-28 15:48:16.639 [main] INFO  com.parabank.automation.hooks.Hooks - Scenario PASSED: Find transactions across amount and transaction ID criteria
+2026-09-28 15:48:16.640 [main] INFO  com.parabank.automation.hooks.Hooks - Tearing down WebDriver session and clearing ScenarioContext.
+2026-09-28 15:48:16.717 [main] INFO  c.p.automation.driver.DriverManager - WebDriver successfully terminated on thread main
+]]></system-out>
+    <system-err><![CDATA[Sept 28, 2026 3:48:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 153
+Sept 28, 2026 3:48:09 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 153.0.8010.53. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.29.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
   </testcase>
-  <testcase name="Loan Application Approval - Successfully apply for a loan and verify loan account creation" classname="Loan Application Approval" time="0.0">
-    <skipped message="&apos;cucumber.filter.tags=@EndToEnd&apos; did not match this scenario"/>
+  <testcase name="Loan Application Approval - Successfully apply for a loan and verify loan account creation" classname="Loan Application Approval" time="6.255">
+    <system-out><![CDATA[
+@LoanApplication @LoanApproval @Regression @RequiresAuth
+Scenario: Successfully apply for a loan and verify loan account creation             &amp#27;[90m# features/05_loan_application_approval.feature:7&amp#27;[0m
+2026-09-28 15:48:16.724 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:16.724 [main] INFO  com.parabank.automation.hooks.Hooks - STARTING SCENARIO: Successfully apply for a loan and verify loan account creation
+2026-09-28 15:48:16.724 [main] INFO  com.parabank.automation.hooks.Hooks - Tags: [@LoanApplication, @LoanApproval, @Regression, @RequiresAuth]
+2026-09-28 15:48:16.724 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:16.724 [main] INFO  c.p.automation.driver.DriverManager - Initializing WebDriver instance for browser: chrome, headless: true
+2026-09-28 15:48:17.237 [main] INFO  c.p.automation.driver.DriverManager - WebDriver initialized successfully on thread main
+2026-09-28 15:48:18.880 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Logging into Parabank with username 'HellBound'
+2026-09-28 15:48:19.357 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
+2026-09-28 15:48:19.363 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
+2026-09-28 15:48:19.408 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
+2026-09-28 15:48:19.453 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user logs into Parabank with credentials &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m     &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsInWithCredentials(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:48:20.773 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:20.792 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:20.839 [main] INFO  c.p.a.pages.AccountsOverviewPage - Found 7 active accounts: [23889, 24888, 24999, 25332, 25443, 25554, 27663]
+2026-09-28 15:48:20.840 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:20.867 [main] INFO  c.p.a.s.LoanApplicationSteps - Eligible account identified: 23889 with balance $-415.5
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user identifies an eligible account with sufficient funds for down payment&amp#27;[0m &amp#27;[90m# com.parabank.automation.stepdefinitions.LoanApplicationSteps.identifyEligibleAccount()&amp#27;[0m
+2026-09-28 15:48:20.868 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'requestloan.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'requestloan.htm')]
+2026-09-28 15:48:20.868 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'requestloan.htm')]
+2026-09-28 15:48:21.219 [main] INFO  c.p.automation.pages.RequestLoanPage - Applying for loan: Amount=$1000.0, DownPayment=$100.0, FromAccount=23889
+2026-09-28 15:48:21.249 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '1000.00' into element: By.id: amount
+2026-09-28 15:48:21.283 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '100.00' into element: By.id: downPayment
+2026-09-28 15:48:21.323 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.id: fromAccountId
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user applies for a loan with amount &amp#27;[0m&amp#27;[32m&amp#27;[1m"1000.00"&amp#27;[0m&amp#27;[32m and down payment &amp#27;[0m&amp#27;[32m&amp#27;[1m"100.00"&amp#27;[0m   &amp#27;[90m# com.parabank.automation.stepdefinitions.LoanApplicationSteps.applyForLoan(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe loan request should be processed with status &amp#27;[0m&amp#27;[32m&amp#27;[1m"Approved"&amp#27;[0m                   &amp#27;[90m# com.parabank.automation.stepdefinitions.LoanApplicationSteps.verifyLoanProcessedStatus(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:21.950 [main] INFO  c.p.a.s.LoanApplicationSteps - Generated new Loan Account ID: 28884
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32ma new loan account number should be generated&amp#27;[0m                                  &amp#27;[90m# com.parabank.automation.stepdefinitions.LoanApplicationSteps.captureNewLoanAccountId()&amp#27;[0m
+2026-09-28 15:48:21.950 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'overview.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:48:21.950 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Accounts Overview&amp#27;[0m                                       &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToAccountsOverview()&amp#27;[0m
+2026-09-28 15:48:22.842 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:22.857 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:22.899 [main] INFO  c.p.a.pages.AccountsOverviewPage - Found 8 active accounts: [23889, 24888, 24999, 25332, 25443, 25554, 27663, 28884]
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe new loan account should be present in the accounts table&amp#27;[0m                  &amp#27;[90m# com.parabank.automation.stepdefinitions.LoanApplicationSteps.verifyNewLoanAccountInOverview()&amp#27;[0m
+2026-09-28 15:48:22.900 [main] INFO  com.parabank.automation.hooks.Hooks - Scenario PASSED: Successfully apply for a loan and verify loan account creation
+2026-09-28 15:48:22.901 [main] INFO  com.parabank.automation.hooks.Hooks - Tearing down WebDriver session and clearing ScenarioContext.
+2026-09-28 15:48:22.974 [main] INFO  c.p.automation.driver.DriverManager - WebDriver successfully terminated on thread main
+]]></system-out>
+    <system-err><![CDATA[Sept 28, 2026 3:48:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 153
+Sept 28, 2026 3:48:17 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 153.0.8010.53. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.29.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
   </testcase>
-  <testcase name="Loan Application Risk Denial - Reject excessive loan request and assert balance conservation" classname="Loan Application Risk Denial" time="0.0">
-    <skipped message="&apos;cucumber.filter.tags=@EndToEnd&apos; did not match this scenario"/>
+  <testcase name="Loan Application Risk Denial - Reject excessive loan request and assert balance conservation" classname="Loan Application Risk Denial" time="6.384">
+    <system-out><![CDATA[
+@LoanApplication @LoanDenial @Regression @RequiresAuth
+Scenario: Reject excessive loan request and assert balance conservation                     &amp#27;[90m# features/06_loan_application_risk_denial.feature:7&amp#27;[0m
+2026-09-28 15:48:22.983 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:22.983 [main] INFO  com.parabank.automation.hooks.Hooks - STARTING SCENARIO: Reject excessive loan request and assert balance conservation
+2026-09-28 15:48:22.983 [main] INFO  com.parabank.automation.hooks.Hooks - Tags: [@LoanApplication, @LoanDenial, @Regression, @RequiresAuth]
+2026-09-28 15:48:22.983 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:22.983 [main] INFO  c.p.automation.driver.DriverManager - Initializing WebDriver instance for browser: chrome, headless: true
+2026-09-28 15:48:23.524 [main] INFO  c.p.automation.driver.DriverManager - WebDriver initialized successfully on thread main
+2026-09-28 15:48:25.088 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Logging into Parabank with username 'HellBound'
+2026-09-28 15:48:25.849 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
+2026-09-28 15:48:25.856 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
+2026-09-28 15:48:25.900 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
+2026-09-28 15:48:25.944 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user logs into Parabank with credentials &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m            &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsInWithCredentials(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:48:27.217 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:27.235 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:27.283 [main] INFO  c.p.a.pages.AccountsOverviewPage - Found 8 active accounts: [23889, 24888, 24999, 25332, 25443, 25554, 27663, 28884]
+2026-09-28 15:48:27.283 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:27.323 [main] INFO  c.p.a.s.LoanApplicationSteps - Eligible account identified: 23889 with balance $-515.5
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user notes the primary account number and current balance&amp#27;[0m                         &amp#27;[90m# com.parabank.automation.stepdefinitions.LoanApplicationSteps.notePrimaryAccountAndBalance()&amp#27;[0m
+2026-09-28 15:48:27.324 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'requestloan.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'requestloan.htm')]
+2026-09-28 15:48:27.324 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'requestloan.htm')]
+2026-09-28 15:48:27.659 [main] INFO  c.p.automation.pages.RequestLoanPage - Applying for loan: Amount=$1000000.0, DownPayment=$10.0, FromAccount=23889
+2026-09-28 15:48:27.685 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '1000000.00' into element: By.id: amount
+2026-09-28 15:48:27.718 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '10.00' into element: By.id: downPayment
+2026-09-28 15:48:27.771 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.id: fromAccountId
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user applies for an excessive loan of &amp#27;[0m&amp#27;[32m&amp#27;[1m"1000000.00"&amp#27;[0m&amp#27;[32m with down payment &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m     &amp#27;[90m# com.parabank.automation.stepdefinitions.LoanApplicationSteps.applyForExcessiveLoan(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe loan request status should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"Denied"&amp#27;[0m                                           &amp#27;[90m# com.parabank.automation.stepdefinitions.LoanApplicationSteps.verifyLoanRequestStatus(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe system should display an error message stating insufficient funds or down payment&amp#27;[0m &amp#27;[90m# com.parabank.automation.stepdefinitions.LoanApplicationSteps.verifyLoanDenialErrorMessage()&amp#27;[0m
+2026-09-28 15:48:28.386 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'overview.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:48:28.386 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Accounts Overview&amp#27;[0m                                              &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToAccountsOverview()&amp#27;[0m
+2026-09-28 15:48:29.227 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mno new loan account should have been added to the customer portfolio&amp#27;[0m                 &amp#27;[90m# com.parabank.automation.stepdefinitions.LoanApplicationSteps.verifyNoNewLoanAccountAdded()&amp#27;[0m
+2026-09-28 15:48:29.242 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:29.258 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe primary account balance should remain completely unchanged&amp#27;[0m                        &amp#27;[90m# com.parabank.automation.stepdefinitions.LoanApplicationSteps.verifyPrimaryBalanceUnchanged()&amp#27;[0m
+2026-09-28 15:48:29.289 [main] INFO  com.parabank.automation.hooks.Hooks - Scenario PASSED: Reject excessive loan request and assert balance conservation
+2026-09-28 15:48:29.289 [main] INFO  com.parabank.automation.hooks.Hooks - Tearing down WebDriver session and clearing ScenarioContext.
+2026-09-28 15:48:29.358 [main] INFO  c.p.automation.driver.DriverManager - WebDriver successfully terminated on thread main
+]]></system-out>
+    <system-err><![CDATA[Sept 28, 2026 3:48:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 153
+Sept 28, 2026 3:48:23 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 153.0.8010.53. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.29.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
   </testcase>
-  <testcase name="Customer Profile Persistence Audit - Update contact info and verify persistence after relogin" classname="Customer Profile Persistence Audit" time="0.0">
-    <skipped message="&apos;cucumber.filter.tags=@EndToEnd&apos; did not match this scenario"/>
+  <testcase name="Customer Profile Persistence Audit - Update contact info and verify persistence after relogin" classname="Customer Profile Persistence Audit" time="8.84">
+    <system-out><![CDATA[
+@ProfileManagement @Security @Regression @RequiresAuth
+Scenario: Update contact info and verify persistence after relogin               &amp#27;[90m# features/07_profile_persistence_audit.feature:7&amp#27;[0m
+2026-09-28 15:48:29.365 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:29.365 [main] INFO  com.parabank.automation.hooks.Hooks - STARTING SCENARIO: Update contact info and verify persistence after relogin
+2026-09-28 15:48:29.365 [main] INFO  com.parabank.automation.hooks.Hooks - Tags: [@ProfileManagement, @Security, @Regression, @RequiresAuth]
+2026-09-28 15:48:29.365 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:29.365 [main] INFO  c.p.automation.driver.DriverManager - Initializing WebDriver instance for browser: chrome, headless: true
+2026-09-28 15:48:29.909 [main] INFO  c.p.automation.driver.DriverManager - WebDriver initialized successfully on thread main
+2026-09-28 15:48:31.582 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Logging into Parabank with username 'HellBound'
+2026-09-28 15:48:32.068 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
+2026-09-28 15:48:32.074 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
+2026-09-28 15:48:32.119 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
+2026-09-28 15:48:32.167 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user logs into Parabank with credentials &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsInWithCredentials(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:48:33.481 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'updateprofile.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'updateprofile.htm')]
+2026-09-28 15:48:33.481 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'updateprofile.htm')]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Update Contact Info&amp#27;[0m                                 &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToUpdateContactInfo()&amp#27;[0m
+2026-09-28 15:48:34.358 [main] INFO  c.p.a.pages.UpdateProfilePage - Updating contact info: Street='777 Quantum Way', City='Cyberville', State='WA', Zip='98052', Phone='425-555-0144'
+2026-09-28 15:48:34.375 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '777 Quantum Way' into element: By.id: customer.address.street
+2026-09-28 15:48:34.416 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'Cyberville' into element: By.id: customer.address.city
+2026-09-28 15:48:34.473 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'WA' into element: By.id: customer.address.state
+2026-09-28 15:48:34.509 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '98052' into element: By.id: customer.address.zipCode
+2026-09-28 15:48:34.545 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '425-555-0144' into element: By.id: customer.phoneNumber
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mupdates the profile with new contact information:&amp#27;[0m                          &amp#27;[90m# com.parabank.automation.stepdefinitions.ProfileManagementSteps.updateContactInformation(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | Street          | City       | State | Zip Code | Phone Number |
+    | 777 Quantum Way | Cyberville | WA    | 98052    | 425-555-0144 |
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe profile update confirmation message should be displayed&amp#27;[0m               &amp#27;[90m# com.parabank.automation.stepdefinitions.ProfileManagementSteps.verifyProfileUpdateConfirmation()&amp#27;[0m
+2026-09-28 15:48:35.136 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'index.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'logout.htm')]
+2026-09-28 15:48:35.136 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'logout.htm')]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user logs out of Parabank&amp#27;[0m                                             &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsOutOfParabank()&amp#27;[0m
+2026-09-28 15:48:35.780 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
+2026-09-28 15:48:35.783 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
+2026-09-28 15:48:35.819 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
+2026-09-28 15:48:35.858 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mlogs back in with credentials &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m                  &amp#27;[90m# com.parabank.automation.stepdefinitions.ProfileManagementSteps.logBackInWithCredentials(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:48:37.096 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'updateprofile.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'updateprofile.htm')]
+2026-09-28 15:48:37.096 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'updateprofile.htm')]
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user navigates to Update Contact Info&amp#27;[0m                                  &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToUpdateContactInfo()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe persisted street address should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"777 Quantum Way"&amp#27;[0m                  &amp#27;[90m# com.parabank.automation.stepdefinitions.ProfileManagementSteps.verifyPersistedStreet(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe persisted city should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"Cyberville"&amp#27;[0m                                  &amp#27;[90m# com.parabank.automation.stepdefinitions.ProfileManagementSteps.verifyPersistedCity(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe persisted state should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"WA"&amp#27;[0m                                         &amp#27;[90m# com.parabank.automation.stepdefinitions.ProfileManagementSteps.verifyPersistedState(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe persisted zip code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"98052"&amp#27;[0m                                   &amp#27;[90m# com.parabank.automation.stepdefinitions.ProfileManagementSteps.verifyPersistedZipCode(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe persisted phone number should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"425-555-0144"&amp#27;[0m                        &amp#27;[90m# com.parabank.automation.stepdefinitions.ProfileManagementSteps.verifyPersistedPhoneNumber(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:38.123 [main] INFO  com.parabank.automation.hooks.Hooks - Scenario PASSED: Update contact info and verify persistence after relogin
+2026-09-28 15:48:38.123 [main] INFO  com.parabank.automation.hooks.Hooks - Tearing down WebDriver session and clearing ScenarioContext.
+2026-09-28 15:48:38.199 [main] INFO  c.p.automation.driver.DriverManager - WebDriver successfully terminated on thread main
+]]></system-out>
+    <system-err><![CDATA[Sept 28, 2026 3:48:29 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 153
+Sept 28, 2026 3:48:29 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 153.0.8010.53. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.29.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
   </testcase>
-  <testcase name="Interleaved Multi-Account Fund Allocation - Sequentially fund multiple accounts and audit total conservation of funds" classname="Interleaved Multi-Account Fund Allocation" time="0.0">
-    <skipped message="&apos;cucumber.filter.tags=@EndToEnd&apos; did not match this scenario"/>
+  <testcase name="Interleaved Multi-Account Fund Allocation - Sequentially fund multiple accounts and audit total conservation of funds" classname="Interleaved Multi-Account Fund Allocation" time="12.769">
+    <system-out><![CDATA[
+@ComplexFlow @MultiAccount @Regression @RequiresAuth
+Scenario: Sequentially fund multiple accounts and audit total conservation of funds             &amp#27;[90m# features/08_interleaved_multi_account_allocation.feature:7&amp#27;[0m
+2026-09-28 15:48:38.210 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:38.210 [main] INFO  com.parabank.automation.hooks.Hooks - STARTING SCENARIO: Sequentially fund multiple accounts and audit total conservation of funds
+2026-09-28 15:48:38.210 [main] INFO  com.parabank.automation.hooks.Hooks - Tags: [@ComplexFlow, @MultiAccount, @Regression, @RequiresAuth]
+2026-09-28 15:48:38.210 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:38.210 [main] INFO  c.p.automation.driver.DriverManager - Initializing WebDriver instance for browser: chrome, headless: true
+2026-09-28 15:48:38.716 [main] INFO  c.p.automation.driver.DriverManager - WebDriver initialized successfully on thread main
+2026-09-28 15:48:40.349 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Logging into Parabank with username 'HellBound'
+2026-09-28 15:48:41.126 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
+2026-09-28 15:48:41.133 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
+2026-09-28 15:48:41.178 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
+2026-09-28 15:48:41.223 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user logs into Parabank with credentials &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m                &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsInWithCredentials(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:48:42.503 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'openaccount.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'openaccount.htm')]
+2026-09-28 15:48:42.504 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'openaccount.htm')]
+2026-09-28 15:48:43.376 [main] INFO  c.p.automation.pages.OpenAccountPage - Selecting account type: CHECKING
+2026-09-28 15:48:43.403 [main] INFO  c.p.automation.utils.ElementActions - Selecting option value '0' from dropdown: By.id: type
+2026-09-28 15:48:43.475 [main] INFO  c.p.a.s.AccountLifecycleSteps - Auto-discovered primary account ID: 23889
+2026-09-28 15:48:43.475 [main] INFO  c.p.automation.pages.OpenAccountPage - Selecting source account: 23889
+2026-09-28 15:48:43.500 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.id: fromAccountId
+2026-09-28 15:48:43.528 [main] INFO  c.p.automation.pages.OpenAccountPage - Submitting open account request
+2026-09-28 15:48:44.079 [main] INFO  c.p.automation.pages.OpenAccountPage - Newly created account number: 29439
+2026-09-28 15:48:44.079 [main] INFO  c.p.a.s.AccountLifecycleSteps - Opened secondary account: 29439
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user opens a secondary &amp#27;[0m&amp#27;[32m&amp#27;[1m"CHECKING"&amp#27;[0m&amp#27;[32m account funded from primary account&amp#27;[0m                 &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.openSecondaryAccount(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:44.080 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'openaccount.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'openaccount.htm')]
+2026-09-28 15:48:44.080 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'openaccount.htm')]
+2026-09-28 15:48:44.938 [main] INFO  c.p.automation.pages.OpenAccountPage - Selecting account type: SAVINGS
+2026-09-28 15:48:44.963 [main] INFO  c.p.automation.utils.ElementActions - Selecting option value '1' from dropdown: By.id: type
+2026-09-28 15:48:45.004 [main] INFO  c.p.automation.pages.OpenAccountPage - Selecting source account: 23889
+2026-09-28 15:48:45.029 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.id: fromAccountId
+2026-09-28 15:48:45.061 [main] INFO  c.p.automation.pages.OpenAccountPage - Submitting open account request
+2026-09-28 15:48:45.603 [main] INFO  c.p.automation.pages.OpenAccountPage - Newly created account number: 29550
+2026-09-28 15:48:45.603 [main] INFO  c.p.a.s.AccountLifecycleSteps - Opened tertiary account: 29550
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user opens a third &amp#27;[0m&amp#27;[32m&amp#27;[1m"SAVINGS"&amp#27;[0m&amp#27;[32m account funded from primary account&amp#27;[0m                      &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.openTertiaryAccount(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:45.603 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'overview.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:48:45.603 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:48:46.464 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:46.482 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:46.509 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:46.538 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:46.569 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:46.601 [main] INFO  c.p.a.s.AccountLifecycleSteps - Recorded initial trio balances: Primary=$-715.5, Secondary=$100.0, Tertiary=$100.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user records balances of primary, secondary, and tertiary accounts&amp#27;[0m                    &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.recordBalancesOfThreeAccounts()&amp#27;[0m
+2026-09-28 15:48:46.601 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'transfer.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
+2026-09-28 15:48:46.601 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
+2026-09-28 15:48:47.470 [main] INFO  c.p.a.pages.TransferFundsPage - Initiating fund transfer of $25.0 from 23889 to 29439
+2026-09-28 15:48:47.503 [main] INFO  c.p.a.pages.TransferFundsPage - Entering transfer amount: 25.0
+2026-09-28 15:48:47.504 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '25.00' into element: By.id: amount
+2026-09-28 15:48:47.543 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting source account: 23889
+2026-09-28 15:48:47.558 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.id: fromAccountId
+2026-09-28 15:48:47.586 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting target account: 29439
+2026-09-28 15:48:47.628 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '29439' from dropdown: By.id: toAccountId
+2026-09-28 15:48:47.667 [main] INFO  c.p.a.pages.TransferFundsPage - Clicking Transfer button
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user transfers &amp#27;[0m&amp#27;[32m&amp#27;[1m"25.00"&amp#27;[0m&amp#27;[32m from primary account to secondary account&amp#27;[0m                     &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.transferPrimaryToSecondary(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:48.212 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'transfer.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
+2026-09-28 15:48:48.212 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
+2026-09-28 15:48:49.059 [main] INFO  c.p.a.pages.TransferFundsPage - Initiating fund transfer of $10.0 from 29439 to 29550
+2026-09-28 15:48:49.092 [main] INFO  c.p.a.pages.TransferFundsPage - Entering transfer amount: 10.0
+2026-09-28 15:48:49.092 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '10.00' into element: By.id: amount
+2026-09-28 15:48:49.130 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting source account: 29439
+2026-09-28 15:48:49.191 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '29439' from dropdown: By.id: fromAccountId
+2026-09-28 15:48:49.228 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting target account: 29550
+2026-09-28 15:48:49.276 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '29550' from dropdown: By.id: toAccountId
+2026-09-28 15:48:49.322 [main] INFO  c.p.a.pages.TransferFundsPage - Clicking Transfer button
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user transfers &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m&amp#27;[32m from secondary account to tertiary account&amp#27;[0m                     &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.transferSecondaryToTertiary(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:49.855 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'overview.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:48:49.855 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Accounts Overview&amp#27;[0m                                                  &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToAccountsOverview()&amp#27;[0m
+2026-09-28 15:48:50.728 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:50.743 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe primary account net balance should decrease by &amp#27;[0m&amp#27;[32m&amp#27;[1m"25.00"&amp#27;[0m                               &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.verifyPrimaryNetDecrease(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:50.767 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:50.781 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe secondary account net balance should increase by &amp#27;[0m&amp#27;[32m&amp#27;[1m"15.00"&amp#27;[0m                              &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.verifySecondaryNetIncrease(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:50.806 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:50.821 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe tertiary account net balance should increase by &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m                               &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.verifyTertiaryNetIncrease(java.lang.String)&amp#27;[0m
+2026-09-28 15:48:50.849 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:48:50.865 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe overall total portfolio balance should remain preserved across all internal transfers&amp#27;[0m &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.verifyTotalPortfolioBalancePreserved()&amp#27;[0m
+2026-09-28 15:48:50.893 [main] INFO  com.parabank.automation.hooks.Hooks - Scenario PASSED: Sequentially fund multiple accounts and audit total conservation of funds
+2026-09-28 15:48:50.893 [main] INFO  com.parabank.automation.hooks.Hooks - Tearing down WebDriver session and clearing ScenarioContext.
+2026-09-28 15:48:50.970 [main] INFO  c.p.automation.driver.DriverManager - WebDriver successfully terminated on thread main
+]]></system-out>
+    <system-err><![CDATA[Sept 28, 2026 3:48:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 153
+Sept 28, 2026 3:48:38 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 153.0.8010.53. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.29.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
   </testcase>
-  <testcase name="Bill Pay Validation and Boundary Testing - Validate field error handling on account mismatch and missing inputs" classname="Bill Pay Validation and Boundary Testing" time="0.0">
-    <skipped message="&apos;cucumber.filter.tags=@EndToEnd&apos; did not match this scenario"/>
+  <testcase name="Bill Pay Validation and Boundary Testing - Validate field error handling on account mismatch and missing inputs" classname="Bill Pay Validation and Boundary Testing" time="4.912">
+    <system-out><![CDATA[
+@BillPay @Validation @Boundary @Regression @RequiresAuth
+Scenario: Validate field error handling on account mismatch and missing inputs   &amp#27;[90m# features/09_bill_pay_validation_boundary.feature:7&amp#27;[0m
+2026-09-28 15:48:50.975 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:50.975 [main] INFO  com.parabank.automation.hooks.Hooks - STARTING SCENARIO: Validate field error handling on account mismatch and missing inputs
+2026-09-28 15:48:50.975 [main] INFO  com.parabank.automation.hooks.Hooks - Tags: [@BillPay, @Validation, @Boundary, @Regression, @RequiresAuth]
+2026-09-28 15:48:50.975 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:50.975 [main] INFO  c.p.automation.driver.DriverManager - Initializing WebDriver instance for browser: chrome, headless: true
+2026-09-28 15:48:51.537 [main] INFO  c.p.automation.driver.DriverManager - WebDriver initialized successfully on thread main
+2026-09-28 15:48:53.138 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Logging into Parabank with username 'HellBound'
+2026-09-28 15:48:53.641 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
+2026-09-28 15:48:53.646 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
+2026-09-28 15:48:53.691 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
+2026-09-28 15:48:53.732 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user logs into Parabank with credentials &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsInWithCredentials(java.lang.String,java.lang.String)&amp#27;[0m
+2026-09-28 15:48:55.006 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'billpay.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'billpay.htm')]
+2026-09-28 15:48:55.006 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'billpay.htm')]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Bill Pay&amp#27;[0m                                            &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToBillPay()&amp#27;[0m
+2026-09-28 15:48:55.333 [main] INFO  c.p.automation.pages.BillPayPage - Clicking Send Payment button
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mattempts to submit bill payment with empty required fields&amp#27;[0m                 &amp#27;[90m# com.parabank.automation.stepdefinitions.BillPaymentSteps.submitEmptyBillPayment()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mfield validation error messages should be displayed for required inputs&amp#27;[0m   &amp#27;[90m# com.parabank.automation.stepdefinitions.BillPaymentSteps.verifyFieldValidationErrors()&amp#27;[0m
+2026-09-28 15:48:55.369 [main] INFO  c.p.automation.pages.BillPayPage - Filling Bill Pay form for payee: Water Works
+2026-09-28 15:48:55.369 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'Water Works' into element: By.name: payee.name
+2026-09-28 15:48:55.403 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '100 River Rd' into element: By.name: payee.address.street
+2026-09-28 15:48:55.459 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'Metro' into element: By.name: payee.address.city
+2026-09-28 15:48:55.495 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'NY' into element: By.name: payee.address.state
+2026-09-28 15:48:55.532 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '10001' into element: By.name: payee.address.zipCode
+2026-09-28 15:48:55.572 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '555-111-2222' into element: By.name: payee.phoneNumber
+2026-09-28 15:48:55.609 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '12345' into element: By.name: payee.accountNumber
+2026-09-28 15:48:55.666 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '54321' into element: By.name: verifyAccount
+2026-09-28 15:48:55.701 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '75.00' into element: By.name: amount
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user enters payee details with mismatched account numbers:&amp#27;[0m            &amp#27;[90m# com.parabank.automation.stepdefinitions.BillPaymentSteps.enterMismatchedPayeeDetails(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | Payee Name  | Address      | City  | State | Zip Code | Phone Number | Account Number | Verify Account | Amount |
+    | Water Works | 100 River Rd | Metro | NY    | 10001    | 555-111-2222 | 12345          | 54321          | 75.00  |
+2026-09-28 15:48:55.738 [main] INFO  c.p.automation.pages.BillPayPage - Clicking Send Payment button
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mclicks Send Payment&amp#27;[0m                                                        &amp#27;[90m# com.parabank.automation.stepdefinitions.BillPaymentSteps.clickSendPaymentButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32ma validation error should state that account numbers do not match&amp#27;[0m         &amp#27;[90m# com.parabank.automation.stepdefinitions.BillPaymentSteps.verifyAccountMismatchError()&amp#27;[0m
+2026-09-28 15:48:55.806 [main] INFO  com.parabank.automation.hooks.Hooks - Scenario PASSED: Validate field error handling on account mismatch and missing inputs
+2026-09-28 15:48:55.806 [main] INFO  com.parabank.automation.hooks.Hooks - Tearing down WebDriver session and clearing ScenarioContext.
+2026-09-28 15:48:55.882 [main] INFO  c.p.automation.driver.DriverManager - WebDriver successfully terminated on thread main
+]]></system-out>
+    <system-err><![CDATA[Sept 28, 2026 3:48:51 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 153
+Sept 28, 2026 3:48:51 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 153.0.8010.53. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.29.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
   </testcase>
-  <testcase name="End-to-End Banking Workflow and Session Security - Execute composite banking workflow and verify post-logout session isolation" classname="End-to-End Banking Workflow and Session Security" time="10.084">
+  <testcase name="End-to-End Banking Workflow and Session Security - Execute composite banking workflow and verify post-logout session isolation" classname="End-to-End Banking Workflow and Session Security" time="9.282">
     <system-out><![CDATA[
 @EndToEnd @Security @SessionControl @Regression @RequiresAuth
 Scenario: Execute composite banking workflow and verify post-logout session isolation        &amp#27;[90m# features/10_end_to_end_banking_security.feature:7&amp#27;[0m
-2026-09-28 15:35:03.382 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
-2026-09-28 15:35:03.383 [main] INFO  com.parabank.automation.hooks.Hooks - STARTING SCENARIO: Execute composite banking workflow and verify post-logout session isolation
-2026-09-28 15:35:03.384 [main] INFO  com.parabank.automation.hooks.Hooks - Tags: [@EndToEnd, @Security, @SessionControl, @Regression, @RequiresAuth]
-2026-09-28 15:35:03.384 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
-2026-09-28 15:35:03.385 [main] INFO  c.p.automation.config.ConfigReader - Successfully loaded configuration properties from config.properties
-2026-09-28 15:35:03.386 [main] INFO  c.p.automation.driver.DriverManager - Initializing WebDriver instance for browser: chrome, headless: true
-2026-09-28 15:35:04.222 [main] INFO  c.p.automation.driver.DriverManager - WebDriver initialized successfully on thread main
-2026-09-28 15:35:05.791 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Logging into Parabank with username 'HellBound'
-2026-09-28 15:35:06.264 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
-2026-09-28 15:35:06.274 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
-2026-09-28 15:35:06.333 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
-2026-09-28 15:35:06.383 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
+2026-09-28 15:48:55.886 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:55.886 [main] INFO  com.parabank.automation.hooks.Hooks - STARTING SCENARIO: Execute composite banking workflow and verify post-logout session isolation
+2026-09-28 15:48:55.886 [main] INFO  com.parabank.automation.hooks.Hooks - Tags: [@EndToEnd, @Security, @SessionControl, @Regression, @RequiresAuth]
+2026-09-28 15:48:55.886 [main] INFO  com.parabank.automation.hooks.Hooks - ================================================================================
+2026-09-28 15:48:55.886 [main] INFO  c.p.automation.driver.DriverManager - Initializing WebDriver instance for browser: chrome, headless: true
+2026-09-28 15:48:56.420 [main] INFO  c.p.automation.driver.DriverManager - WebDriver initialized successfully on thread main
+2026-09-28 15:48:58.040 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Logging into Parabank with username 'HellBound'
+2026-09-28 15:48:58.520 [main] INFO  c.p.automation.pages.LoginPage - Logging in with username: HellBound
+2026-09-28 15:48:58.526 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: username
+2026-09-28 15:48:58.570 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing 'HellBound' into element: By.name: password
+2026-09-28 15:48:58.614 [main] INFO  c.p.automation.pages.LoginPage - Submitting login form
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user logs into Parabank with credentials &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"HellBound"&amp#27;[0m             &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsInWithCredentials(java.lang.String,java.lang.String)&amp#27;[0m
-2026-09-28 15:35:07.713 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'openaccount.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'openaccount.htm')]
-2026-09-28 15:35:07.713 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'openaccount.htm')]
+2026-09-28 15:48:59.939 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'openaccount.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'openaccount.htm')]
+2026-09-28 15:48:59.939 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'openaccount.htm')]
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Open New Account&amp#27;[0m                                                &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToOpenNewAccount()&amp#27;[0m
-2026-09-28 15:35:08.589 [main] INFO  c.p.automation.pages.OpenAccountPage - Selecting account type: SAVINGS
-2026-09-28 15:35:08.634 [main] INFO  c.p.automation.utils.ElementActions - Selecting option value '1' from dropdown: By.id: type
-2026-09-28 15:35:08.741 [main] INFO  c.p.a.s.AccountLifecycleSteps - Auto-discovered primary account ID: 13677
-2026-09-28 15:35:08.742 [main] INFO  c.p.automation.pages.OpenAccountPage - Selecting source account: 13677
-2026-09-28 15:35:08.772 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '13677' from dropdown: By.id: fromAccountId
-2026-09-28 15:35:08.816 [main] INFO  c.p.automation.pages.OpenAccountPage - Submitting open account request
+2026-09-28 15:49:00.802 [main] INFO  c.p.automation.pages.OpenAccountPage - Selecting account type: SAVINGS
+2026-09-28 15:49:00.856 [main] INFO  c.p.automation.utils.ElementActions - Selecting option value '1' from dropdown: By.id: type
+2026-09-28 15:49:00.941 [main] INFO  c.p.a.s.AccountLifecycleSteps - Auto-discovered primary account ID: 23889
+2026-09-28 15:49:00.942 [main] INFO  c.p.automation.pages.OpenAccountPage - Selecting source account: 23889
+2026-09-28 15:49:00.966 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.id: fromAccountId
+2026-09-28 15:49:00.997 [main] INFO  c.p.automation.pages.OpenAccountPage - Submitting open account request
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user opens a new &amp#27;[0m&amp#27;[32m&amp#27;[1m"SAVINGS"&amp#27;[0m&amp#27;[32m account with funds transferred from the primary account&amp#27;[0m &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.openNewAccountWithFunds(java.lang.String)&amp#27;[0m
-2026-09-28 15:35:09.388 [main] INFO  c.p.automation.pages.OpenAccountPage - Newly created account number: 50973
-2026-09-28 15:35:09.425 [main] INFO  c.p.a.s.AccountLifecycleSteps - Successfully created and captured new account ID: 50973
+2026-09-28 15:49:01.547 [main] INFO  c.p.automation.pages.OpenAccountPage - Newly created account number: 29994
+2026-09-28 15:49:01.548 [main] INFO  c.p.a.s.AccountLifecycleSteps - Successfully created and captured new account ID: 29994
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32ma new account number is generated and captured&amp#27;[0m                                        &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.captureNewAccountNumber()&amp#27;[0m
-2026-09-28 15:35:09.426 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'transfer.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
-2026-09-28 15:35:09.426 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
-2026-09-28 15:35:10.296 [main] INFO  c.p.a.pages.TransferFundsPage - Initiating fund transfer of $60.0 from 13677 to 50973
-2026-09-28 15:35:10.344 [main] INFO  c.p.a.pages.TransferFundsPage - Entering transfer amount: 60.0
-2026-09-28 15:35:10.345 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '60.00' into element: By.id: amount
-2026-09-28 15:35:10.390 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting source account: 13677
-2026-09-28 15:35:10.413 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '13677' from dropdown: By.id: fromAccountId
-2026-09-28 15:35:10.451 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting target account: 50973
-2026-09-28 15:35:10.494 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '50973' from dropdown: By.id: toAccountId
-2026-09-28 15:35:10.542 [main] INFO  c.p.a.pages.TransferFundsPage - Clicking Transfer button
+2026-09-28 15:49:01.548 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'transfer.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
+2026-09-28 15:49:01.548 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'transfer.htm')]
+2026-09-28 15:49:02.419 [main] INFO  c.p.a.pages.TransferFundsPage - Initiating fund transfer of $60.0 from 23889 to 29994
+2026-09-28 15:49:02.455 [main] INFO  c.p.a.pages.TransferFundsPage - Entering transfer amount: 60.0
+2026-09-28 15:49:02.456 [main] INFO  c.p.automation.utils.ElementActions - Clearing and typing '60.00' into element: By.id: amount
+2026-09-28 15:49:02.494 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting source account: 23889
+2026-09-28 15:49:02.511 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '23889' from dropdown: By.id: fromAccountId
+2026-09-28 15:49:02.544 [main] INFO  c.p.a.pages.TransferFundsPage - Selecting target account: 29994
+2026-09-28 15:49:02.599 [main] INFO  c.p.automation.utils.ElementActions - Selecting option '29994' from dropdown: By.id: toAccountId
+2026-09-28 15:49:02.637 [main] INFO  c.p.a.pages.TransferFundsPage - Clicking Transfer button
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user transfers &amp#27;[0m&amp#27;[32m&amp#27;[1m"60.00"&amp#27;[0m&amp#27;[32m from the primary account to the newly created account&amp#27;[0m      &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.transferFundsToNewlyCreatedAccount(java.lang.String)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32ma transfer confirmation message should be displayed with amount &amp#27;[0m&amp#27;[32m&amp#27;[1m"60.00"&amp#27;[0m               &amp#27;[90m# com.parabank.automation.stepdefinitions.TransferFundsSteps.verifyTransferConfirmation(java.lang.String)&amp#27;[0m
-2026-09-28 15:35:11.112 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'overview.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
-2026-09-28 15:35:11.113 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:49:03.188 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'overview.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
+2026-09-28 15:49:03.188 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'overview.htm')]
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user navigates to Accounts Overview&amp#27;[0m                                               &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userNavigatesToAccountsOverview()&amp#27;[0m
-2026-09-28 15:35:11.978 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
-2026-09-28 15:35:11.999 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:49:04.063 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
+2026-09-28 15:49:04.082 [main] INFO  c.p.a.pages.AccountsOverviewPage - Waiting for Accounts Overview table to dynamically render...
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe newly created account balance should equal &amp#27;[0m&amp#27;[32m&amp#27;[1m"160.00"&amp#27;[0m                               &amp#27;[90m# com.parabank.automation.stepdefinitions.AccountLifecycleSteps.verifyNewlyCreatedAccountBalance(java.lang.String)&amp#27;[0m
-2026-09-28 15:35:12.034 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'index.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'logout.htm')]
-2026-09-28 15:35:12.034 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'logout.htm')]
+2026-09-28 15:49:04.107 [main] INFO  c.p.automation.pages.NavigationMenu - Navigating to 'index.htm' using link: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'logout.htm')]
+2026-09-28 15:49:04.107 [main] INFO  c.p.automation.utils.ElementActions - JS clicking on element: By.xpath: //div[@id='leftPanel']//a[contains(@href, 'logout.htm')]
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user logs out of Parabank&amp#27;[0m                                                         &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userLogsOutOfParabank()&amp#27;[0m
-2026-09-28 15:35:12.744 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Attempting unauthorized access to https://parabank.parasoft.com/parabank/overview.htm
+2026-09-28 15:49:04.750 [main] INFO  c.p.a.stepdefinitions.CommonSteps - Attempting unauthorized access to https://parabank.parasoft.com/parabank/overview.htm
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mattempts direct deep-link access to secure URL &amp#27;[0m&amp#27;[32m&amp#27;[1m"overview.htm"&amp#27;[0m                          &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userAttemptsDeepLinkAccess(java.lang.String)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe user should see the login form indicating session termination&amp#27;[0m                     &amp#27;[90m# com.parabank.automation.stepdefinitions.CommonSteps.userShouldSeeLoginForm()&amp#27;[0m
-2026-09-28 15:35:13.120 [main] INFO  com.parabank.automation.hooks.Hooks - Scenario PASSED: Execute composite banking workflow and verify post-logout session isolation
-2026-09-28 15:35:13.120 [main] INFO  com.parabank.automation.hooks.Hooks - Tearing down WebDriver session and clearing ScenarioContext.
-2026-09-28 15:35:13.206 [main] INFO  c.p.automation.driver.DriverManager - WebDriver successfully terminated on thread main
+2026-09-28 15:49:05.090 [main] INFO  com.parabank.automation.hooks.Hooks - Scenario PASSED: Execute composite banking workflow and verify post-logout session isolation
+2026-09-28 15:49:05.090 [main] INFO  com.parabank.automation.hooks.Hooks - Tearing down WebDriver session and clearing ScenarioContext.
+2026-09-28 15:49:05.166 [main] INFO  c.p.automation.driver.DriverManager - WebDriver successfully terminated on thread main
 ]]></system-out>
-    <system-err><![CDATA[Sept 28, 2026 3:35:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sept 28, 2026 3:48:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 153
-Sept 28, 2026 3:35:04 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Sept 28, 2026 3:48:56 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 153.0.8010.53. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.29.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>

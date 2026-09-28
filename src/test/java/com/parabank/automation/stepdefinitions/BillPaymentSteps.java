@@ -21,19 +21,25 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.within;
 
+/**
+ * Step definitions for Bill Payment scenarios.
+ * Zero-arg constructor — no DI container required.
+ */
 public class BillPaymentSteps {
     private static final Logger log = LoggerFactory.getLogger(BillPaymentSteps.class);
     private final WebDriver driver = DriverManager.getDriver();
-    private final ScenarioContext context;
     private final BillPayPage billPayPage;
     private final AccountsOverviewPage overviewPage;
     private final AccountDetailsPage detailsPage;
 
-    public BillPaymentSteps(ScenarioContext context) {
-        this.context = context;
+    public BillPaymentSteps() {
         this.billPayPage = new BillPayPage(driver);
         this.overviewPage = new AccountsOverviewPage(driver);
         this.detailsPage = new AccountDetailsPage(driver);
+    }
+
+    private ScenarioContext ctx() {
+        return ScenarioContext.current();
     }
 
     @And("the user records the available balance of the active checking account")
@@ -43,8 +49,8 @@ public class BillPaymentSteps {
         String primaryId = accounts.get(0);
         double bal = overviewPage.getAccountBalance(primaryId);
 
-        context.set(ContextKey.PRIMARY_ACCOUNT_ID, primaryId);
-        context.set(ContextKey.SOURCE_INITIAL_BALANCE, bal);
+        ctx().set(ContextKey.PRIMARY_ACCOUNT_ID, primaryId);
+        ctx().set(ContextKey.SOURCE_INITIAL_BALANCE, bal);
         log.info("Active checking account {} recorded with balance: ${}", primaryId, bal);
     }
 
@@ -54,7 +60,7 @@ public class BillPaymentSteps {
         List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
         Map<String, String> data = rows.get(0);
 
-        String fromAccountId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String fromAccountId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
         double amount = Double.parseDouble(data.get("Amount"));
 
         BillPayee payee = new BillPayee(
@@ -69,8 +75,8 @@ public class BillPaymentSteps {
                 amount
         );
 
-        context.set(ContextKey.BILL_PAYEE, payee);
-        context.set(ContextKey.BILL_AMOUNT, amount);
+        ctx().set(ContextKey.BILL_PAYEE, payee);
+        ctx().set(ContextKey.BILL_AMOUNT, amount);
 
         billPayPage.payBill(payee, fromAccountId);
     }
@@ -94,8 +100,8 @@ public class BillPaymentSteps {
     @Then("the checking account balance should be reduced by {string}")
     public void verifyCheckingBalanceReduced(String amountStr) {
         overviewPage.waitForOverviewTableToLoad();
-        String accountId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
-        double initialBal = context.getDouble(ContextKey.SOURCE_INITIAL_BALANCE);
+        String accountId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        double initialBal = ctx().getDouble(ContextKey.SOURCE_INITIAL_BALANCE);
         double billAmount = Double.parseDouble(amountStr);
         double currentBal = overviewPage.getAccountBalance(accountId);
 
@@ -106,7 +112,7 @@ public class BillPaymentSteps {
 
     @When("the user navigates to the checking account transaction history")
     public void navigateToCheckingTransactionHistory() {
-        String accountId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String accountId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
         overviewPage.clickAccount(accountId);
     }
 

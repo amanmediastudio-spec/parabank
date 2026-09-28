@@ -17,19 +17,25 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Step definitions for Transaction Search scenarios.
+ * Zero-arg constructor — no DI container required.
+ */
 public class TransactionSearchSteps {
     private static final Logger log = LoggerFactory.getLogger(TransactionSearchSteps.class);
     private final WebDriver driver = DriverManager.getDriver();
-    private final ScenarioContext context;
     private final FindTransactionsPage findTransPage;
     private final TransferFundsPage transferPage;
     private final AccountsOverviewPage overviewPage;
 
-    public TransactionSearchSteps(ScenarioContext context) {
-        this.context = context;
+    public TransactionSearchSteps() {
         this.findTransPage = new FindTransactionsPage(driver);
         this.transferPage = new TransferFundsPage(driver);
         this.overviewPage = new AccountsOverviewPage(driver);
+    }
+
+    private ScenarioContext ctx() {
+        return ScenarioContext.current();
     }
 
     @And("the user executes a unique transfer of {string} to generate an identifiable transaction")
@@ -39,9 +45,9 @@ public class TransactionSearchSteps {
         String primaryId = accounts.get(0);
         String targetId = accounts.size() > 1 ? accounts.get(1) : primaryId;
 
-        context.set(ContextKey.PRIMARY_ACCOUNT_ID, primaryId);
+        ctx().set(ContextKey.PRIMARY_ACCOUNT_ID, primaryId);
         double amount = Double.parseDouble(amountStr);
-        context.set(ContextKey.TRANSACTION_AMOUNT, amount);
+        ctx().set(ContextKey.TRANSACTION_AMOUNT, amount);
 
         transferPage.navigation().clickTransferFunds();
         transferPage.transferFunds(amount, primaryId, targetId);
@@ -50,7 +56,7 @@ public class TransactionSearchSteps {
 
     @When("searches for transactions with amount {string}")
     public void searchTransactionsByAmount(String amountStr) {
-        String accountId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String accountId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
         if (accountId != null) {
             findTransPage.selectAccount(accountId);
         }
@@ -72,19 +78,19 @@ public class TransactionSearchSteps {
         assertThat(ids).as("At least one matching transaction ID must be returned").isNotEmpty();
 
         String transactionId = ids.get(0);
-        context.set(ContextKey.TRANSACTION_ID, transactionId);
+        ctx().set(ContextKey.TRANSACTION_ID, transactionId);
         log.info("Captured Transaction ID: {}", transactionId);
     }
 
     @And("searches for the transaction by its exact ID")
     public void searchByExactTransactionId() {
-        String transactionId = context.getString(ContextKey.TRANSACTION_ID);
+        String transactionId = ctx().getString(ContextKey.TRANSACTION_ID);
         findTransPage.searchById(transactionId);
     }
 
     @Then("the search results should contain the matching transaction ID")
     public void verifyMatchingTransactionIdInResults() {
-        String transactionId = context.getString(ContextKey.TRANSACTION_ID);
+        String transactionId = ctx().getString(ContextKey.TRANSACTION_ID);
         List<String> ids = findTransPage.getMatchingTransactionIds();
 
         assertThat(ids)

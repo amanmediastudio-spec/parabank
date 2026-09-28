@@ -17,17 +17,23 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.within;
 
+/**
+ * Step definitions for Loan Application scenarios.
+ * Zero-arg constructor — no DI container required.
+ */
 public class LoanApplicationSteps {
     private static final Logger log = LoggerFactory.getLogger(LoanApplicationSteps.class);
     private final WebDriver driver = DriverManager.getDriver();
-    private final ScenarioContext context;
     private final RequestLoanPage loanPage;
     private final AccountsOverviewPage overviewPage;
 
-    public LoanApplicationSteps(ScenarioContext context) {
-        this.context = context;
+    public LoanApplicationSteps() {
         this.loanPage = new RequestLoanPage(driver);
         this.overviewPage = new AccountsOverviewPage(driver);
+    }
+
+    private ScenarioContext ctx() {
+        return ScenarioContext.current();
     }
 
     @And("the user identifies an eligible account with sufficient funds for down payment")
@@ -38,15 +44,15 @@ public class LoanApplicationSteps {
 
         String accountId = accounts.get(0);
         double balance = overviewPage.getAccountBalance(accountId);
-        context.set(ContextKey.PRIMARY_ACCOUNT_ID, accountId);
-        context.set(ContextKey.SOURCE_INITIAL_BALANCE, balance);
+        ctx().set(ContextKey.PRIMARY_ACCOUNT_ID, accountId);
+        ctx().set(ContextKey.SOURCE_INITIAL_BALANCE, balance);
         log.info("Eligible account identified: {} with balance ${}", accountId, balance);
     }
 
     @When("the user applies for a loan with amount {string} and down payment {string}")
     public void applyForLoan(String amountStr, String downPaymentStr) {
         loanPage.navigation().clickRequestLoan();
-        String accountId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String accountId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
         double amount = Double.parseDouble(amountStr);
         double downPayment = Double.parseDouble(downPaymentStr);
 
@@ -75,14 +81,14 @@ public class LoanApplicationSteps {
         assertThat(loanAccountId)
                 .as("Approved loan must generate a valid new account number")
                 .isNotBlank();
-        context.set(ContextKey.LOAN_ACCOUNT_ID, loanAccountId);
+        ctx().set(ContextKey.LOAN_ACCOUNT_ID, loanAccountId);
         log.info("Generated new Loan Account ID: {}", loanAccountId);
     }
 
     @Then("the new loan account should be present in the accounts table")
     public void verifyNewLoanAccountInOverview() {
         overviewPage.waitForOverviewTableToLoad();
-        String loanId = context.getString(ContextKey.LOAN_ACCOUNT_ID);
+        String loanId = ctx().getString(ContextKey.LOAN_ACCOUNT_ID);
         List<String> accounts = overviewPage.getAccountIds();
 
         assertThat(accounts)
@@ -111,7 +117,7 @@ public class LoanApplicationSteps {
     @Then("no new loan account should have been added to the customer portfolio")
     public void verifyNoNewLoanAccountAdded() {
         overviewPage.waitForOverviewTableToLoad();
-        String deniedLoanId = context.getString(ContextKey.LOAN_ACCOUNT_ID);
+        String deniedLoanId = ctx().getString(ContextKey.LOAN_ACCOUNT_ID);
         if (deniedLoanId != null) {
             assertThat(overviewPage.getAccountIds()).doesNotContain(deniedLoanId);
         }
@@ -120,8 +126,8 @@ public class LoanApplicationSteps {
     @And("the primary account balance should remain completely unchanged")
     public void verifyPrimaryBalanceUnchanged() {
         overviewPage.waitForOverviewTableToLoad();
-        String primaryId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
-        double initialBal = context.getDouble(ContextKey.SOURCE_INITIAL_BALANCE);
+        String primaryId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        double initialBal = ctx().getDouble(ContextKey.SOURCE_INITIAL_BALANCE);
         double currentBal = overviewPage.getAccountBalance(primaryId);
 
         assertThat(currentBal)

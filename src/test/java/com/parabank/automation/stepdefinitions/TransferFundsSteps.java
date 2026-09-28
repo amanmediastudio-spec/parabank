@@ -20,21 +20,27 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.within;
 
+/**
+ * Step definitions for Fund Transfer scenarios.
+ * Zero-arg constructor — no DI container required.
+ */
 public class TransferFundsSteps {
     private static final Logger log = LoggerFactory.getLogger(TransferFundsSteps.class);
     private final WebDriver driver = DriverManager.getDriver();
-    private final ScenarioContext context;
     private final TransferFundsPage transferPage;
     private final AccountsOverviewPage overviewPage;
     private final AccountDetailsPage detailsPage;
     private final OpenAccountPage openAccountPage;
 
-    public TransferFundsSteps(ScenarioContext context) {
-        this.context = context;
+    public TransferFundsSteps() {
         this.transferPage = new TransferFundsPage(driver);
         this.overviewPage = new AccountsOverviewPage(driver);
         this.detailsPage = new AccountDetailsPage(driver);
         this.openAccountPage = new OpenAccountPage(driver);
+    }
+
+    private ScenarioContext ctx() {
+        return ScenarioContext.current();
     }
 
     @And("the user ensures at least two active accounts exist, capturing source and target account IDs")
@@ -57,24 +63,24 @@ public class TransferFundsSteps {
         String sourceId = accountIds.get(0);
         String targetId = accountIds.get(1);
 
-        context.set(ContextKey.PRIMARY_ACCOUNT_ID, sourceId);
-        context.set(ContextKey.SECONDARY_ACCOUNT_ID, targetId);
+        ctx().set(ContextKey.PRIMARY_ACCOUNT_ID, sourceId);
+        ctx().set(ContextKey.SECONDARY_ACCOUNT_ID, targetId);
         log.info("Source Account ID: {}, Target Account ID: {}", sourceId, targetId);
     }
 
     @And("the user records initial balances for both source and target accounts")
     public void recordInitialBalances() {
         overviewPage.waitForOverviewTableToLoad();
-        String sourceId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
-        String targetId = context.getString(ContextKey.SECONDARY_ACCOUNT_ID);
+        String sourceId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String targetId = ctx().getString(ContextKey.SECONDARY_ACCOUNT_ID);
 
         double sourceBal = overviewPage.getAccountBalance(sourceId);
         double targetBal = overviewPage.getAccountBalance(targetId);
         double totalBal = overviewPage.getTotalBalance();
 
-        context.set(ContextKey.SOURCE_INITIAL_BALANCE, sourceBal);
-        context.set(ContextKey.TARGET_INITIAL_BALANCE, targetBal);
-        context.set(ContextKey.TOTAL_PORTFOLIO_BALANCE, totalBal);
+        ctx().set(ContextKey.SOURCE_INITIAL_BALANCE, sourceBal);
+        ctx().set(ContextKey.TARGET_INITIAL_BALANCE, targetBal);
+        ctx().set(ContextKey.TOTAL_PORTFOLIO_BALANCE, totalBal);
 
         log.info("Initial Source Bal: ${}, Target Bal: ${}, Total: ${}", sourceBal, targetBal, totalBal);
     }
@@ -82,10 +88,10 @@ public class TransferFundsSteps {
     @When("the user transfers {string} from the source account to the target account")
     public void transferFundsBetweenAccounts(String amountStr) {
         double amount = Double.parseDouble(amountStr);
-        String sourceId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
-        String targetId = context.getString(ContextKey.SECONDARY_ACCOUNT_ID);
+        String sourceId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String targetId = ctx().getString(ContextKey.SECONDARY_ACCOUNT_ID);
 
-        context.set(ContextKey.TRANSFER_AMOUNT, amount);
+        ctx().set(ContextKey.TRANSFER_AMOUNT, amount);
         transferPage.navigation().clickTransferFunds();
         transferPage.transferFunds(amount, sourceId, targetId);
     }
@@ -93,10 +99,10 @@ public class TransferFundsSteps {
     @When("the user transfers {string} from the primary account to the newly created account")
     public void transferFundsToNewlyCreatedAccount(String amountStr) {
         double amount = Double.parseDouble(amountStr);
-        String sourceId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
-        String targetId = context.getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
+        String sourceId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String targetId = ctx().getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
 
-        context.set(ContextKey.TRANSFER_AMOUNT, amount);
+        ctx().set(ContextKey.TRANSFER_AMOUNT, amount);
         transferPage.navigation().clickTransferFunds();
         transferPage.transferFunds(amount, sourceId, targetId);
     }
@@ -116,8 +122,8 @@ public class TransferFundsSteps {
     @Then("the source account balance should be decreased by exactly {string}")
     public void verifySourceBalanceDecreased(String amountStr) {
         overviewPage.waitForOverviewTableToLoad();
-        String sourceId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
-        double initialBal = context.getDouble(ContextKey.SOURCE_INITIAL_BALANCE);
+        String sourceId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        double initialBal = ctx().getDouble(ContextKey.SOURCE_INITIAL_BALANCE);
         double transferredAmount = Double.parseDouble(amountStr);
         double currentBal = overviewPage.getAccountBalance(sourceId);
 
@@ -129,8 +135,8 @@ public class TransferFundsSteps {
     @And("the target account balance should be increased by exactly {string}")
     public void verifyTargetBalanceIncreased(String amountStr) {
         overviewPage.waitForOverviewTableToLoad();
-        String targetId = context.getString(ContextKey.SECONDARY_ACCOUNT_ID);
-        double initialBal = context.getDouble(ContextKey.TARGET_INITIAL_BALANCE);
+        String targetId = ctx().getString(ContextKey.SECONDARY_ACCOUNT_ID);
+        double initialBal = ctx().getDouble(ContextKey.TARGET_INITIAL_BALANCE);
         double transferredAmount = Double.parseDouble(amountStr);
         double currentBal = overviewPage.getAccountBalance(targetId);
 
@@ -142,7 +148,7 @@ public class TransferFundsSteps {
     @When("the user views the transaction history of the source account")
     public void viewSourceAccountTransactions() {
         overviewPage.waitForOverviewTableToLoad();
-        String sourceId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String sourceId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
         overviewPage.clickAccount(sourceId);
     }
 
@@ -160,7 +166,7 @@ public class TransferFundsSteps {
     public void viewTargetAccountTransactions() {
         detailsPage.navigation().clickAccountsOverview();
         overviewPage.waitForOverviewTableToLoad();
-        String targetId = context.getString(ContextKey.SECONDARY_ACCOUNT_ID);
+        String targetId = ctx().getString(ContextKey.SECONDARY_ACCOUNT_ID);
         overviewPage.clickAccount(targetId);
     }
 
@@ -177,8 +183,8 @@ public class TransferFundsSteps {
     @When("the user transfers {string} from primary account to secondary account")
     public void transferPrimaryToSecondary(String amountStr) {
         double amount = Double.parseDouble(amountStr);
-        String primaryId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
-        String secondaryId = context.getString(ContextKey.SECONDARY_ACCOUNT_ID);
+        String primaryId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        String secondaryId = ctx().getString(ContextKey.SECONDARY_ACCOUNT_ID);
 
         transferPage.navigation().clickTransferFunds();
         transferPage.transferFunds(amount, primaryId, secondaryId);
@@ -187,8 +193,8 @@ public class TransferFundsSteps {
     @And("the user transfers {string} from secondary account to tertiary account")
     public void transferSecondaryToTertiary(String amountStr) {
         double amount = Double.parseDouble(amountStr);
-        String secondaryId = context.getString(ContextKey.SECONDARY_ACCOUNT_ID);
-        String tertiaryId = context.getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
+        String secondaryId = ctx().getString(ContextKey.SECONDARY_ACCOUNT_ID);
+        String tertiaryId = ctx().getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
 
         transferPage.navigation().clickTransferFunds();
         transferPage.transferFunds(amount, secondaryId, tertiaryId);
@@ -197,8 +203,8 @@ public class TransferFundsSteps {
     @Then("the primary account net balance should decrease by {string}")
     public void verifyPrimaryNetDecrease(String amountStr) {
         overviewPage.waitForOverviewTableToLoad();
-        String primaryId = context.getString(ContextKey.PRIMARY_ACCOUNT_ID);
-        double initialBal = context.getDouble(ContextKey.SOURCE_INITIAL_BALANCE);
+        String primaryId = ctx().getString(ContextKey.PRIMARY_ACCOUNT_ID);
+        double initialBal = ctx().getDouble(ContextKey.SOURCE_INITIAL_BALANCE);
         double delta = Double.parseDouble(amountStr);
 
         double current = overviewPage.getAccountBalance(primaryId);
@@ -208,8 +214,8 @@ public class TransferFundsSteps {
     @And("the secondary account net balance should increase by {string}")
     public void verifySecondaryNetIncrease(String amountStr) {
         overviewPage.waitForOverviewTableToLoad();
-        String secondaryId = context.getString(ContextKey.SECONDARY_ACCOUNT_ID);
-        double initialBal = context.getDouble(ContextKey.TARGET_INITIAL_BALANCE);
+        String secondaryId = ctx().getString(ContextKey.SECONDARY_ACCOUNT_ID);
+        double initialBal = ctx().getDouble(ContextKey.TARGET_INITIAL_BALANCE);
         double delta = Double.parseDouble(amountStr);
 
         double current = overviewPage.getAccountBalance(secondaryId);
@@ -219,9 +225,9 @@ public class TransferFundsSteps {
     @And("the tertiary account net balance should increase by {string}")
     public void verifyTertiaryNetIncrease(String amountStr) {
         overviewPage.waitForOverviewTableToLoad();
-        String tertiaryId = context.getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
+        String tertiaryId = ctx().getString(ContextKey.NEW_SAVINGS_ACCOUNT_ID);
         double delta = Double.parseDouble(amountStr);
-        double initialBal = context.getDouble(ContextKey.TERTIARY_INITIAL_BALANCE);
+        double initialBal = ctx().getDouble(ContextKey.TERTIARY_INITIAL_BALANCE);
 
         double current = overviewPage.getAccountBalance(tertiaryId);
         assertThat(current).isCloseTo(initialBal + delta, within(0.01));
@@ -230,7 +236,7 @@ public class TransferFundsSteps {
     @And("the overall total portfolio balance should remain preserved across all internal transfers")
     public void verifyTotalPortfolioBalancePreserved() {
         overviewPage.waitForOverviewTableToLoad();
-        double initialTotal = context.getDouble(ContextKey.TOTAL_PORTFOLIO_BALANCE);
+        double initialTotal = ctx().getDouble(ContextKey.TOTAL_PORTFOLIO_BALANCE);
         double currentTotal = overviewPage.getTotalBalance();
 
         assertThat(currentTotal)

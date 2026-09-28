@@ -24,9 +24,17 @@ public class AccountsOverviewPage extends BasePage {
 
     public void waitForOverviewTableToLoad() {
         log.info("Waiting for Accounts Overview table to dynamically render...");
-        waitUtils.waitForVisibility(accountTable);
-        waitUtils.waitForPresence(accountLinks);
-        waitUtils.waitForAjax();
+        try {
+            waitUtils.waitForVisibility(accountTable);
+            waitUtils.waitForPresence(accountLinks);
+            waitUtils.waitForAjax();
+        } catch (org.openqa.selenium.TimeoutException e) {
+            log.warn("Accounts Overview table did not appear on first attempt — refreshing page and retrying...");
+            driver.navigate().refresh();
+            waitUtils.waitForVisibility(accountTable);
+            waitUtils.waitForPresence(accountLinks);
+            waitUtils.waitForAjax();
+        }
     }
 
     public List<String> getAccountIds() {
